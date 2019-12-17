@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react"
-import { TweenMax, Power3, TimelineLite } from "gsap"
+import React, { useEffect, useRef, useState } from "react"
+import gsap from "gsap"
 // import * as scrollMagic from "scrollmagic"
 
 import Layout from "../components/layout"
@@ -17,7 +17,7 @@ const IndexPage = () => {
   let overlay = useRef(null)
   let content = useRef(null)
 
-  let tl = new TimelineLite({ delay: 1 })
+  const [tl] = useState(gsap.timeline({ delay: 1 }))
 
   useEffect(() => {
     //content Animation
@@ -37,7 +37,7 @@ const IndexPage = () => {
       {
         y: 50,
         opacity: 0,
-        ease: Power3.easeOut,
+        ease: "power3.easeOut",
         delay: 0.8,
         // height: 100,
       },
@@ -46,24 +46,24 @@ const IndexPage = () => {
     ).to(overlay, {
       duration: 0.7,
       height: 0,
-      ease: Power3.inOut,
+      ease: "power3.inOut",
       stagger: {
         amount: 0.05,
       },
     })
 
     //For Header
-    TweenMax.to(app, 0, {
+    tl.to(app, 0, {
       css: { visibility: "visible" },
     })
 
     //Image
-    tl.from(image, 1.7, { y: 20, ease: Power3.easeOut }, "Start").from(
+    tl.from(image, 1.7, { y: 20, ease: "power3.easeOut" }, "Start").from(
       image.firstElementChild,
       2,
       {
         scale: 1.6,
-        ease: Power3.easeOut,
+        ease: "power3.easeOut",
       },
       1
     )
@@ -74,7 +74,7 @@ const IndexPage = () => {
       {
         y: 50,
         opacity: 0,
-        ease: Power3.easeOut,
+        ease: "power3.easeOut",
         delay: 1.8,
       },
       1.8,
