@@ -1,0 +1,175 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@font-face {
+  font-family: CircularStd;
+  src: url("./src/fonts/CircularStd-Book.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: CircularStdMedium;
+  src: url("./src/fonts/CircularStd-Medium.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: CircularStdBold;
+  src: url("./src/fonts/CircularStd-Bold.otf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: CircularStdBlack;
+  src: url("./src/fonts/CircularStd-Black.otf");
+  font-weight: 800;
+}
+
+/********************
+  Active-class
+********************/
+.active {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #000;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  overflow: hidden;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.home {
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  color: #000;
+  text-decoration: none;
+}
+
+.home:hover a {
+  padding-bottom: 4px;
+  border-style: none none solid;
+  border-width: 2px;
+  border-color: #000;
+}
+
+.about {
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  color: #000;
+  text-decoration: none;
+}
+
+.about:hover a {
+  padding-bottom: 4px;
+  border-style: none none solid;
+  border-width: 2px;
+  border-color: #000;
+}
+
+.image-hover {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+
+.image-hover img:hover {
+  transform: scale(1.05);
+}
+
+.project-link {
+  padding: 5px 0;
+  border-bottom: 2px solid #000;
+  transition: 0.2s ease-out;
+}
+
+.project-link:hover {
+  content: "⇾";
+  background-color: #000;
+  color: white;
+  padding: 5px 8px;
+}
+
+.project-link:hover::after {
+  content: "⇾";
+  padding-left: 4px;
+}
+
+.mail-link {
+  padding: 5px 0;
+  border-bottom: 2px solid rgb(113, 128, 150);
+  transition: 0.2s ease-out;
+}
+
+.mail-link:hover {
+  content: "⇾";
+  background-color: rgb(113, 128, 150);
+  color: #fff;
+  padding: 5px 8px;
+}
+
+.mail-link:hover::after {
+  content: "⇾";
+  padding-left: 4px;
+}
+
+.overlay {
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container-inner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-inner {
+    max-width: 640px;
+  }
+
+  .nav-item {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-inner {
+    max-width: 768px;
+  }
+
+  .nav-item {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-inner {
+    max-width: 990px;
+  }
+
+  .nav-item {
+    padding: 0 30px;
+  }
+}
+
+.transition-easy {
+  transition: 200ms ease;
+}
