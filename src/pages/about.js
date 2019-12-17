@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from "react"
-import { Power3, TimelineLite } from "gsap"
+import React, { useRef, useEffect, useState } from "react"
+import gsap from "gsap"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -12,15 +12,15 @@ const SecondPage = () => {
   let app = useRef(null)
   let image = useRef(null)
 
-  let tl = new TimelineLite({ delay: 1 })
+  const [tl] = useState(gsap.timeline({ delay: 1 }))
 
   useEffect(() => {
-    tl.from(image, 1.2, { y: 20, ease: Power3.easeOut }, "Start").from(
+    tl.from(image, 1.2, { y: 20, ease: "power3.easeOut" }, "Start").from(
       image.firstElementChild,
       1,
       {
         scale: 1.6,
-        ease: Power3.easeOut,
+        ease: "power3.easeOut",
       },
       1
     )
@@ -31,7 +31,7 @@ const SecondPage = () => {
       {
         y: 50,
         opacity: 0,
-        ease: Power3.easeOut,
+        ease: "power3.easeOut",
         delay: 0.8,
       },
       1,

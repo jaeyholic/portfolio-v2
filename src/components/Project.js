@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react"
-import { TweenMax, Power3, TimelineLite } from "gsap"
+import React, { useEffect, useRef, useState } from "react"
+import gsap from "gsap"
 import Img from "gatsby-image"
 
 const Projects = ({ title, text, img, link, linkText }) => {
@@ -7,21 +7,21 @@ const Projects = ({ title, text, img, link, linkText }) => {
   let image = useRef(null)
   let contents = useRef(null)
 
-  let tl = new TimelineLite({ delay: 0.8 })
+  const [tl] = useState(gsap.timeline({ delay: 0.8 }))
 
   useEffect(() => {
     //For Header
-    TweenMax.to(app, 0, {
+    tl.to(app, 0, {
       css: { visibility: "visible" },
     })
 
     //Image
-    tl.from(image, 1.2, { y: 20, ease: Power3.easeOut }, "Start").from(
+    tl.from(image, 1.2, { y: 20, ease: "power3.easeOut" }, "Start").from(
       image.firstElementChild,
       2,
       {
         scale: 1.6,
-        ease: Power3.easeOut,
+        ease: "power3.easeOut",
       },
       0.2
     )
@@ -37,7 +37,7 @@ const Projects = ({ title, text, img, link, linkText }) => {
       {
         y: 50,
         opacity: 0,
-        ease: Power3.easeOut,
+        ease: "power3.easeOut",
         delay: 0.8,
       },
       0.15,
