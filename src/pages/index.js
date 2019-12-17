@@ -39,7 +39,7 @@ const IndexPage = () => {
         opacity: 0,
         ease: "power3.easeOut",
         delay: 0.8,
-        // height: 100,
+        height: 100,
       },
       0.15,
       "Start"

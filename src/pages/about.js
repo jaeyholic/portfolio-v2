@@ -21,6 +21,9 @@ const SecondPage = () => {
       {
         scale: 1.6,
         ease: "power3.easeOut",
+        stagger: {
+          amount: 0.05,
+        },
       },
       1
     )
