@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,8 +8,6 @@ import SEO from "../components/seo"
 import Wave from "../images/waving.gif"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
-
-ScrollMagicPluginGsap(ScrollMagic, gsap)
 
 const IndexPage = () => {
   let app = useRef(null)
