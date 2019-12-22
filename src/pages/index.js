@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
-// import * as scrollMagic from "scrollmagic"
+import * as ScrollMagic from "scrollmagic"
+import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,6 +10,8 @@ import SEO from "../components/seo"
 import Wave from "../images/waving.gif"
 import Projects from "../components/Projects"
 import Contact from "../components/Contact"
+
+ScrollMagicPluginGsap(ScrollMagic, gsap)
 
 const IndexPage = () => {
   let app = useRef(null)
@@ -27,9 +30,11 @@ const IndexPage = () => {
     const line3 = line2.nextSibling
 
     //Contents Animation
-    const headlineFirst = contents.children[0]
+    const headlineFirst = contents.children[0].children[0]
     const headlineSecond = headlineFirst.nextSibling
-    const headlineThird = headlineSecond.nextSibling.children[0]
+    const headlineThird = headlineSecond.nextSibling
+    const headlineFourth = headlineThird.nextSibling
+    const paragraph = contents.children[1]
 
     tl.staggerFrom(
       [line1, line2, line3],
@@ -39,7 +44,6 @@ const IndexPage = () => {
         opacity: 0,
         ease: "power3.easeOut",
         delay: 0.8,
-        height: 100,
       },
       0.15,
       "Start"
@@ -69,7 +73,7 @@ const IndexPage = () => {
     )
 
     tl.staggerFrom(
-      [headlineFirst, headlineSecond, headlineThird],
+      [headlineFirst, headlineSecond, headlineThird, headlineFourth],
       1.5,
       {
         y: 50,
@@ -79,16 +83,17 @@ const IndexPage = () => {
       },
       1.8,
       "Start"
-    )
+    ).from(paragraph, 3.5, { y: 20, opacity: 0, ease: "power3.easeOut" }, 3.5)
 
-    //scroll-magic
-    // const controller = new scrollMagic.Controller()
-    // const scene = new scrollMagic.Scene({
+    //init scrollmagic
+    // const controller = new ScrollMagic.Controller()
+    // new ScrollMagic.Scene({
     //   triggerElement: "#projects",
     //   triggerHook: 0,
     //   reverse: false,
     //   duration: 150,
     // })
+    //   .addIndicators()
     //   .setTween(tl)
     //   .addTo(controller)
   }, [tl])
@@ -120,15 +125,17 @@ const IndexPage = () => {
           className="w-full lg:w-127 px-4 lg:px-0"
         >
           <h1 className="font-header text-3xl lg:text-5xl leading-none">
-            Hey there *waves*, my name is Felix Yeboah - Jefferson, UI designer,
-            a developer and a traveler.
+            <div>Hey there *waves*, my name is</div>
+            <div>Felix Yeboah - Jefferson, UI</div>
+            <div>designer, a developer and a</div>
+            <div>traveler.</div>
           </h1>
           <p id="sub-header" className="text-xl leading-normal">
             A design-minded & a full-stack javascript web developer focused on
-            building beautiful interfaces & experiences 👨‍💻. I am super
-            passionate about design, development, and business. I have been very
-            fortunate to be able to do all three as a career. Enough about me,
-            how can i help you?
+            building beautiful interfaces & experiences
+            <span role="img">👨‍💻</span>. I am super passionate about design,
+            development, and business. I have been very fortunate to be able to
+            do all three as a career. Enough about me, how can i help you?
           </p>
           <p className="mt-16">
             <a

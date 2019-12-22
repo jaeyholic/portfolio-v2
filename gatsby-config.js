@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Jeff - Front-End Developer, UI/UX Designer`,
@@ -26,6 +30,25 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/jaey-logo-favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `7ijr8gcddvmw`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Merriweather`,
+            subsets: [`latin`],
+          },
+        ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

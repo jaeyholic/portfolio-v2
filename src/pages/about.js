@@ -10,11 +10,19 @@ import Values from "../components/Values"
 
 const SecondPage = () => {
   let app = useRef(null)
+  let contents = useRef(null)
   let image = useRef(null)
 
   const [tl] = useState(gsap.timeline({ delay: 1 }))
 
   useEffect(() => {
+    //For Header
+    tl.to(app, 0, { css: { visibility: "visible" } })
+
+    //Contents Animation
+    const headlineFirst = contents.children[0].children[0]
+    const headlineSecond = headlineFirst.nextSibling
+
     tl.from(image, 1.2, { y: 20, ease: "power3.easeOut" }, "Start").from(
       image.firstElementChild,
       1,
@@ -29,7 +37,7 @@ const SecondPage = () => {
     )
 
     tl.staggerFrom(
-      app,
+      [headlineFirst, headlineSecond],
       1,
       {
         y: 50,
@@ -40,7 +48,7 @@ const SecondPage = () => {
       1,
       "Start"
     )
-  }, [])
+  }, [tl])
 
   const data = useStaticQuery(graphql`
     query {
@@ -57,13 +65,11 @@ const SecondPage = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <div className="mt-20 lg:mt-40 px-4 lg:px-0">
-        <div>
-          <h2
-            ref={el => (app = el)}
-            className="font-header text-3xl lg:text-5xl lg:w-120"
-          >
-            Developing, Designing, Traveling &amp; Music
+      <div ref={el => (app = el)} className="mt-20 lg:mt-40 px-4 lg:px-0">
+        <div ref={el => (contents = el)}>
+          <h2 className="font-header text-3xl lg:text-5xl lg:w-120">
+            <div>Developing, Designing,</div>
+            <div>Traveling &amp; Music</div>
           </h2>
         </div>
 

@@ -20,6 +20,7 @@ module.exports = {
         header: ["CircularStdBlack"],
         display: ["CircularStdBold"],
         medium: ["CircularStdMedium"],
+        post: ["Merriweather"],
         sans: [
           "CircularStd",
           "-apple-system",

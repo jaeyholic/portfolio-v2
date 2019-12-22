@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="container mx-auto mt-24 lg:mt-48">
       <div className="md:flex md:flex-wrap justify-between items">
-        <div className="font-display text-2xl">Jeff.</div>
+        <div className="font-display text-2xl">Jeff.son</div>
         <div className="text-lg">Have a great day. 😘</div>
         <ul className="flex">
           <li className="px-4">
@@ -12,6 +12,7 @@ const Footer = () => {
               target="_blank"
               className="hover:border-b-2 border-black pb-1 transition-easy"
               href="https://github.com/jaeyholic"
+              rel="noopener noreferrer"
             >
               GitHub
             </a>
@@ -21,6 +22,7 @@ const Footer = () => {
               target="_blank"
               className="hover:border-b-2 border-black pb-1 transition-easy"
               href="https://instagram.com/jaeyholic"
+              rel="noopener noreferrer"
             >
               Instagram
             </a>
@@ -30,6 +32,7 @@ const Footer = () => {
               target="_blank"
               className="hover:border-b-2 border-black pb-1 transition-easy"
               href="https://medium.com/@jaeyholic"
+              rel="noopener noreferrer"
             >
               Medium
             </a>
@@ -39,6 +42,7 @@ const Footer = () => {
               target="_blank"
               className="hover:border-b-2 border-black pb-1 transition-easy"
               href="https://dev.to/jaeyholic"
+              rel="noopener noreferrer"
             >
               Dev.to
             </a>
@@ -48,6 +52,7 @@ const Footer = () => {
               target="_blank"
               className="hover:border-b-2 border-black pb-1 transition-easy"
               href="https://twitter.com/jaeyholic"
+              rel="noopener noreferrer"
             >
               Twitter
             </a>

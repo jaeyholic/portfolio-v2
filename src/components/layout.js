@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useRef, useEffect } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 
 import "./layout.css"
@@ -15,7 +15,7 @@ import Footer from "./Footer"
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="relative font-sans antialiased text-black overflow-hidden">
+      <div className="relative font-sans antialiased text-black overflow-hidden border-t-8 border-yellow-500">
         <Nav />
         <div>
           <main className="container mx-auto">{children}</main>

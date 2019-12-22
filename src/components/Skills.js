@@ -50,7 +50,6 @@ const Skills = () => {
               <li>MongoDB</li>
               <li>Git & Github</li>
               <li>Chrome DevTools</li>
-              <li>Chrome DevTools</li>
               <li>Postman</li>
             </ul>
           </div>

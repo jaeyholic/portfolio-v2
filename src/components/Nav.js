@@ -8,7 +8,7 @@ const Nav = () => {
         <div className="flex flex-wrap items-center justify-between px-2 lg:px-0">
           <div>
             <Link to="/" className="font-display text-4xl">
-              Jeff.
+              Jeff.son
             </Link>
           </div>
 
@@ -22,6 +22,12 @@ const Nav = () => {
             <li className="nav-item about">
               <Link exact activeClassName="active" to="/about">
                 about
+              </Link>
+            </li>
+
+            <li className="nav-item about">
+              <Link exact activeClassName="active" to="/blogs">
+                blogs
               </Link>
             </li>
 
