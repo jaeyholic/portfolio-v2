@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
-import * as ScrollMagic from "scrollmagic"
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
 
 import Layout from "../components/layout"
@@ -84,18 +83,6 @@ const IndexPage = () => {
       1.8,
       "Start"
     ).from(paragraph, 3.5, { y: 20, opacity: 0, ease: "power3.easeOut" }, 3.5)
-
-    //init scrollmagic
-    // const controller = new ScrollMagic.Controller()
-    // new ScrollMagic.Scene({
-    //   triggerElement: "#projects",
-    //   triggerHook: 0,
-    //   reverse: false,
-    //   duration: 150,
-    // })
-    //   .addIndicators()
-    //   .setTween(tl)
-    //   .addTo(controller)
   }, [tl])
 
   return (
