@@ -139,7 +139,7 @@ const Projects = ({ limit }) => {
 
           <Project
             title="Bee and Bloom Digital"
-            text="They clients thrive online and offline with products, services and platforms that lead to sustainable growth between their unique brands and targeted markets."
+            text="They help clients thrive online and offline with products, services and platforms that lead to sustainable growth between their unique brands and targeted markets."
             img={data.beeandbloom.childImageSharp.fluid}
             link="#"
             linkText="Bee & Bloom"
