@@ -25,7 +25,7 @@ const Post = ({ data, pageContext }) => {
             <img src={data.post.thumbnail} alt="" />
           </div>
           <p
-            className="w-full md:w-125 mt-20 mx-auto"
+            className="w-full md:w-125 mt-20 mx-auto text-gray-800"
             dangerouslySetInnerHTML={{ __html: data.post.content }}
           />
 

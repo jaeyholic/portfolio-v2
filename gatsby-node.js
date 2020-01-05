@@ -57,8 +57,8 @@ exports.createPages = async ({ graphql, actions }) => {
    * The Post ID is prefixed with 'POST_'
    */
   posts.map((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1]
-    const next = index === 0 ? null : posts[index - 1]
+    const next = index === posts.length - 1 ? null : posts[index + 1]
+    const previous = index === 0 ? null : posts[index - 1]
 
     createPage({
       path: `/blog/${post.node.slug}/`,

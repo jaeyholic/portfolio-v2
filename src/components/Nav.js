@@ -58,7 +58,11 @@ const Nav = () => {
           </div>
 
           <div className="menu">
-            <button disabled={disabled} onClick={handleMenu}>
+            <button
+              className="focus:outline-none"
+              disabled={disabled}
+              onClick={handleMenu}
+            >
               Menu
             </button>
           </div>

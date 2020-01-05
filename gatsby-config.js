@@ -22,7 +22,7 @@ module.exports = {
       resolve: `gatsby-plugin-scroll-indicator`,
       options: {
         // Configure color of the scroll indicator
-        color: "#1A202C",
+        color: "#ecc94b",
         // Configure paths where the scroll indicator will appear
         paths: ["/blog/**"],
         // Configure the z-index of the indicator element
