@@ -27,11 +27,12 @@ exports.createPages = async ({ graphql, actions }) => {
    */
   const result = await graphql(`
     {
-      allContentfulBlogPost {
+      allMediumFeed {
         edges {
           node {
             id
             slug
+            title
           }
         }
       }
@@ -46,8 +47,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const postTemplate = path.resolve(`./src/templates/post.js`)
 
   // Access query results via object destructuring.
-  let { allContentfulBlogPost } = result.data
-  const posts = allContentfulBlogPost.edges
+  let { allMediumFeed } = result.data
+  const posts = allMediumFeed.edges
 
   // @TODO: STEP #3: Create pages in Gatsby with WordPress Posts Data.
   /**

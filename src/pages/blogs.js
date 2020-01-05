@@ -42,19 +42,16 @@ const Blog = () => {
   } = useStaticQuery(
     graphql`
       query {
-        data: allContentfulBlogPost(sort: { order: DESC, fields: createdAt }) {
+        data: allMediumFeed(sort: { order: DESC, fields: date }) {
           edges {
             node {
-              featuredImage {
-                fluid(quality: 100) {
-                  ...GatsbyContentfulFluid_withWebp
-                }
-              }
-              summary
-              title
+              author
+              content
+              date(formatString: "Do, MMMM YYYY")
               id
               slug
-              createdAt(formatString: "Do MMMM YYYY")
+              title
+              thumbnail
             }
           }
         }
@@ -65,28 +62,28 @@ const Blog = () => {
   return (
     <Layout>
       <SEO title="Blogs" />
-      <div ref={el => (app = el)} className="container mx-auto mt-20">
+      <div
+        ref={el => (app = el)}
+        className="container mx-auto mt-20 px-4 sm:px-0"
+      >
         <div ref={el => (contents = el)}>
           <h2 className="font-header text-3xl lg:text-5xl lg:w-125">
-            <div>Personal blogs about me, what</div>
+            <div>Personal writings, what</div>
             <div>I've studied, traveling, what's</div>
             <div>going on in the dev world and</div>
             <div>also lifestyles.</div>
           </h2>
         </div>
 
-        <div className="flex flex-wrap mt-20">
+        <div className="mt-20">
           {data.map(post => (
-            <>
+            <div key={post.node.id}>
               <BlogCard
-                key={post.node.id}
-                img={post.node.featuredImage.fluid}
                 title={post.node.title}
-                date={post.node.createdAt}
-                summary={post.node.summary}
+                date={post.node.date}
                 slug={post.node.slug}
               />
-            </>
+            </div>
           ))}
         </div>
       </div>

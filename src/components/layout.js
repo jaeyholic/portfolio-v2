@@ -15,9 +15,9 @@ import Footer from "./Footer"
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="relative font-sans antialiased text-black overflow-hidden border-t-8 border-yellow-500">
+      <div className="relative font-sans antialiased overflow-hidden border-t-8 border-yellow-500">
         <Nav />
-        <div>
+        <div className="text-black">
           <main className="container mx-auto">{children}</main>
           <Footer />
         </div>

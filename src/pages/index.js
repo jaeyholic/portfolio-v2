@@ -3,11 +3,12 @@ import gsap from "gsap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Projects from "../components/Projects"
+import Contact from "../components/Contact"
 
 //images
 import Wave from "../images/waving.gif"
-import Projects from "../components/Projects"
-import Contact from "../components/Contact"
+import { Link } from "gatsby"
 
 const IndexPage = () => {
   let app = useRef(null)
@@ -84,7 +85,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="👨‍💻👨‍🌾🙋‍♂️ - Front-End Developer, UI/UX Designer" />
+      <SEO title="Front-End Developer, UI/UX Designer" />
 
       <div ref={el => (overlay = el)} className="overlay">
         <div className="flex flex-wrap justify-center items-center h-full">
@@ -108,18 +109,24 @@ const IndexPage = () => {
           ref={el => (contents = el)}
           className="w-full lg:w-127 px-4 lg:px-0"
         >
-          <h1 className="font-header text-3xl lg:text-5xl leading-none">
+          <h1
+            className="font-header text-3xl lg:text-5xl leading-none"
+            id="header"
+          >
             <div>Hey there *waves*, my name is</div>
             <div>Felix Yeboah - Jefferson, UI</div>
             <div>designer, a developer and a</div>
             <div>traveler.</div>
           </h1>
-          <p id="sub-header" className="text-xl leading-normal">
+          <p className="text-xl leading-normal">
             A design-minded & a full-stack javascript web developer focused on
             building beautiful interfaces & experiences
-            <span role="img">👨‍💻</span>. I am super passionate about design,
-            development, and business. I have been very fortunate to be able to
-            do all three as a career. Enough about me, how can i help you?
+            <span role="img" aria-label="computer man emoji">
+              👨‍💻
+            </span>
+            . I am super passionate about design, development, and business. I
+            have been very fortunate to be able to do all three as a career.
+            Enough about me, how can i help you?
           </p>
           <p className="mt-16">
             <a
@@ -131,8 +138,16 @@ const IndexPage = () => {
           </p>
         </div>
         <div>
-          <div id="projects" className="mt-20">
-            <Projects />
+          <div className="mt-20">
+            <Projects limit />
+          </div>
+
+          <div className="text-center text-xl mt-6">
+            <button>
+              <Link className="project-link" to="/projects">
+                see all my projects
+              </Link>
+            </button>
           </div>
 
           <div className="mt-40">

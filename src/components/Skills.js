@@ -8,7 +8,7 @@ const Skills = () => {
       <div className="flex flex-wrap mt-10">
         <div className="w-full md:w-1/2">
           <div>
-            <h5 className="text-lg lg:text-2xl">User Interface Design (UI)</h5>
+            <h5 className="text-lg lg:text-2xl">UI Design</h5>
             <ul className="text-gray-700 text-base lg:text-xl">
               <li>Sketch</li>
               <li>Adobe XD</li>
@@ -35,18 +35,15 @@ const Skills = () => {
         </div>
         <div className="w-full md:w-1/2">
           <div>
-            <h5 className="text-lg lg:text-2xl">Web FrameWorks</h5>
+            <h5 className="text-lg lg:text-2xl">Tools</h5>
             <ul className="text-gray-700 text-base lg:text-xl">
               <li>React</li>
               <li>Vue</li>
               <li>Express</li>
+              <li>Gatsby</li>
+              <li>Gridsome</li>
+              <li>Wordpress</li>
               <li>Node.js</li>
-            </ul>
-          </div>
-
-          <div>
-            <h5 className="text-lg lg:text-2xl">Tools</h5>
-            <ul className="text-gray-700 text-base lg:text-xl">
               <li>MongoDB</li>
               <li>Git & Github</li>
               <li>Chrome DevTools</li>

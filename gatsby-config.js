@@ -1,7 +1,3 @@
-require("dotenv").config({
-  path: `.env`,
-})
-
 module.exports = {
   siteMetadata: {
     title: `Jeff - Front-End Developer, UI/UX Designer`,
@@ -20,6 +16,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-scroll-indicator`,
       options: {
@@ -44,14 +41,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `7ijr8gcddvmw`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.ACCESS_TOKEN,
-      },
-    },
-    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
@@ -60,6 +49,13 @@ module.exports = {
             subsets: [`latin`],
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-source-medium-feed",
+      options: {
+        userName: "@jaeyholic", // Medium user name
+        name: "MediumFeed", // GraphQL query AllMediumFeed
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

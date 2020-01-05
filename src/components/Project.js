@@ -51,7 +51,7 @@ const Projects = ({ title, text, img, link, linkText }) => {
       className="flex flex-wrap my-16 lg:my-20 px-4 lg:px-0"
     >
       <div className="w-full lg:w-3/5">
-        <div ref={el => (image = el)} className="image-hover">
+        <div ref={el => (image = el)}>
           <Img fluid={img} />
         </div>
       </div>
