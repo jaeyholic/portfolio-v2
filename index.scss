@@ -102,10 +102,7 @@ header {
         .menu-links {
           display: block;
           position: relative;
-          top: 250px;
-          @media (min-width: 640px) {
-            top: 200px;
-          }
+          top: 200px;
           nav {
             // display: block;
             ul {

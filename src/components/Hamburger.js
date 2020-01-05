@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import gsap from "gsap"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import {
   staggerText,
@@ -61,40 +61,49 @@ const Hamburger = ({ state }) => {
                     ref={el => (line1 = el)}
                     className="text-4xl md:text-6xl lg:text-7xl w-full md:w-110 lg:w-125 relative overflow-hidden h-16 md:h-24 text-gray-900 pt-8"
                   >
-                    <Link
+                    <AniLink
+                      paintDrip
+                      duration={1}
+                      hex="#000"
                       activeClassName="text-black"
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       to="/projects"
                     >
                       see my projects
-                    </Link>
+                    </AniLink>
                   </li>
                   <li
                     ref={el => (line2 = el)}
                     className="text-4xl md:text-6xl lg:text-7xl w-full md:w-110 lg:w-125 relative overflow-hidden h-16 md:h-24 text-gray-900 pt-8"
                   >
-                    <Link
+                    <AniLink
+                      paintDrip
+                      duration={1}
+                      hex="#000"
                       activeClassName="text-black"
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       to="/about"
                     >
                       more about me
-                    </Link>
+                    </AniLink>
                   </li>
                   <li
                     ref={el => (line3 = el)}
                     className="text-4xl md:text-6xl lg:text-7xl w-full md:w-110 lg:w-125 relative overflow-hidden h-16 md:h-24 text-gray-900 pt-8"
                   >
-                    <Link
+                    <AniLink
+                      paintDrip
+                      duration={1}
+                      hex="#000"
                       activeClassName="text-black"
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
                       to="/blogs"
                     >
                       my writings
-                    </Link>
+                    </AniLink>
                   </li>
                   <li
                     ref={el => (line4 = el)}

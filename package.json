@@ -15,6 +15,7 @@
     "gatsby-plugin-sass": "^2.1.26",
     "gatsby-plugin-scroll-indicator": "^0.1.4",
     "gatsby-plugin-sharp": "^2.3.5",
+    "gatsby-plugin-transition-link": "^1.17.7",
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-source-medium-feed": "^1.0.6",
     "gatsby-transformer-sharp": "^2.3.7",
