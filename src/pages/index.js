@@ -8,7 +8,7 @@ import Contact from "../components/Contact"
 
 //images
 import Wave from "../images/waving.gif"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const IndexPage = () => {
   let app = useRef(null)
@@ -144,9 +144,15 @@ const IndexPage = () => {
 
           <div className="text-center text-xl mt-6">
             <button>
-              <Link className="project-link" to="/projects">
+              <AniLink
+                paintDrip
+                duration={1}
+                hex="#000"
+                className="project-link"
+                to="/projects"
+              >
                 see all my projects
-              </Link>
+              </AniLink>
             </button>
           </div>
 
