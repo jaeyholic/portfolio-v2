@@ -3,7 +3,7 @@ import React from "react"
 const Contact = () => {
   return (
     <div className="px-4 lg:px-0">
-      <h2 className="font-header text-3xl lg:text-5xl leading-none">
+      <h2 className="font-header text-3xl md:text-4xl lg:text-6xl leading-none">
         Let’s work together
         <br /> on your next project.
       </h2>

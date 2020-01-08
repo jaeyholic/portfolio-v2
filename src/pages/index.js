@@ -32,6 +32,7 @@ const IndexPage = () => {
     const headlineThird = headlineSecond.nextSibling
     const headlineFourth = headlineThird.nextSibling
     const paragraph = contents.children[1]
+    const paragraph2 = contents.children[2]
 
     tl.staggerFrom(
       [line1, line2, line3],
@@ -80,7 +81,9 @@ const IndexPage = () => {
       },
       1.8,
       "Start"
-    ).from(paragraph, 3.5, { y: 20, opacity: 0, ease: "power3.easeOut" }, 3.5)
+    )
+      .from(paragraph, 3.5, { y: 20, opacity: 0, ease: "power3.easeOut" }, 3.5)
+      .from(paragraph2, 4.5, { y: 20, opacity: 0, ease: "power3.easeOut" }, 4.5)
   }, [tl])
 
   return (
@@ -119,21 +122,29 @@ const IndexPage = () => {
             <div>traveler.</div>
           </h1>
           <p className="text-xl leading-normal">
-            A design-minded & a full-stack javascript web developer focused on
-            building beautiful interfaces & experiences
+            A self-taught full-stack javascript web developer &amp; a
+            design-minded, focused on building beautiful interfaces &
+            experiences
             <span role="img" aria-label="computer man emoji">
               👨‍💻
             </span>
-            . I am super passionate about design, development, and business. I
-            have been very fortunate to be able to do all three as a career.
-            Enough about me, how can i help you?
+            . Apart from designing and developing, I enjoy traveling, learning
+            new things, new cultures, and lifestyles of other people. I am a
+            critical thinker who loves to find solutions to problems, not only
+            in my line of work but also helps others who are struggling to find
+            their feet in the designer's and developers' world.
+          </p>
+          <p className="text-xl leading-normal">
+            My inbox is always open for any opportunities, whether for a
+            potential project or just to say hi, I'll try my best to answer your
+            email!
           </p>
           <p className="mt-16">
             <a
-              className="pb-2 border-b-2 border-black text-xl font-sans hover:transition-easy hover:border-b-0"
+              className="pb-2 border-b-2 border-black text-2xl font-sans hover:transition-easy hover:border-b-0"
               href="mailto:gabsco208309@hotmail.com"
             >
-              hello@jaeyholic.dev
+              Say Hello: hello@jeffson.dev
             </a>
           </p>
         </div>

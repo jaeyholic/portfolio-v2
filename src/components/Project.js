@@ -61,7 +61,12 @@ const Projects = ({ title, text, img, link, linkText }) => {
           <div ref={el => (contents = el)}>
             <h3 className="text-3xl">{title}</h3>
             <p className="text-lg">{text}</p>
-            <a className="project-link text-base lg:text-lg" href={link}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link text-base lg:text-lg"
+              href={link}
+            >
               Visit {linkText}
             </a>
           </div>

@@ -82,17 +82,40 @@ const SecondPage = () => {
 
         <div className="text-xl lg:text-2xl lg:w-135 mt-12 lg:mt-20 leading-snug">
           <p>
-            I'm Felix Nana Yaw Yeboah - Jefferson, a full-stack javascript web
-            developer and UI/UX designer from Accra, Ghana. I am super
-            passionate about design, development, and business. I have been very
-            fortunate to be able to do all three as a career.
+            A self-taught Full-Stack Javascript Web Developer and UI/UX Designer
+            from Accra, Ghana. I am super passionate about design, development,
+            traveling, a dreamer, and a fanatic of all things digital. I have
+            been very fortunate to be able to do all as a career.
           </p>
           <p>
-            From a technical standpoint, I spend most of my time working with
-            JavaScript, CSS3, HTML5. New and open source web technologies make
-            me super excited and I can’t wait to see what is to come of the web
-            in the next few years. I learn from the community and loves to share
-            what I have learnt back.
+            I <span className="line-through">drink</span> coffee, and I eat
+            pizza. I listen to a lot of music. I write code and improve my
+            design and skills every day: a fast learner and a person who's
+            always humble to learn and grow in all areas. I feel honored to have
+            worked with extraordinary people, startups, and companies that
+            helped to improve not only my skills but also my life.
+          </p>
+
+          <p>
+            I <span className="font-bold">currently</span> work with{" "}
+            <a
+              className="text-gray-800 underline hover:text-gray-900"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://beeandbloom.digital"
+            >
+              Bee &amp; Bloom Digital
+            </a>{" "}
+            as a Frontend Developer &amp; UI/UX Designer &amp;{" "}
+            <a
+              className="text-gray-800 underline hover:text-gray-900"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://completefarmer.com"
+            >
+              Complete Farmer Limited
+            </a>{" "}
+            as a Frontend Developer and also as a freelancer.
           </p>
         </div>
 
