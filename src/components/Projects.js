@@ -130,7 +130,7 @@ const Projects = ({ limit }) => {
             text="They are building a future where everyone can contribute and
               benefit from the shared promise of agriculture in Africa, and
               beyond."
-            img={data.completeFarmer.childImageSharp.fluid}
+            img={data.dashboard.childImageSharp.fluid}
             link="#"
           />
 
