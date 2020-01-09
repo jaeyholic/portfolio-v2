@@ -7,6 +7,13 @@ import Project from "./Project"
 const Projects = ({ limit }) => {
   const data = useStaticQuery(graphql`
     query {
+      dashboard: file(relativePath: { eq: "dashboard.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       completeFarmer: file(relativePath: { eq: "complete-farmer.png" }) {
         childImageSharp {
           fluid(quality: 100) {
@@ -98,15 +105,15 @@ const Projects = ({ limit }) => {
               beyond."
             img={data.completeFarmer.childImageSharp.fluid}
             link="#"
-            linkText="Complete Farmer"
           />
 
           <Project
-            title="Complete Farmer Maintenance Mode"
-            text="This One pager was developed to replace the current website as I was developing their new website to be launched soon!."
-            img={data.onepager.childImageSharp.fluid}
-            link="https://completefarmer.com"
-            linkText="Complete Farmer Maintenance"
+            title="CrowdFarmer Dashboard"
+            text="They are building a future where everyone can contribute and
+              benefit from the shared promise of agriculture in Africa, and
+              beyond."
+            img={data.dashboard.childImageSharp.fluid}
+            link="#"
           />
 
           <Project
@@ -114,11 +121,19 @@ const Projects = ({ limit }) => {
             text="They clients thrive online and offline with products, services and platforms that lead to sustainable growth between their unique brands and targeted markets."
             img={data.beeandbloom.childImageSharp.fluid}
             link="#"
-            linkText="Bee & Bloom"
           />
         </div>
       ) : (
         <div>
+          <Project
+            title="CrowdFarmer Dashboard"
+            text="They are building a future where everyone can contribute and
+              benefit from the shared promise of agriculture in Africa, and
+              beyond."
+            img={data.completeFarmer.childImageSharp.fluid}
+            link="#"
+          />
+
           <Project
             title="Complete Farmer"
             text="They are building a future where everyone can contribute and
@@ -126,15 +141,13 @@ const Projects = ({ limit }) => {
               beyond."
             img={data.completeFarmer.childImageSharp.fluid}
             link="#"
-            linkText="Complete Farmer"
           />
 
           <Project
-            title="Complete Farmer Maintenance Mode"
+            title="Complete Farmer Maintenance"
             text="This One pager was developed to replace the current website as I was developing their new website to be launched soon!."
             img={data.onepager.childImageSharp.fluid}
             link="https://completefarmer.com"
-            linkText="Complete Farmer Maintenance"
           />
 
           <Project
@@ -142,7 +155,6 @@ const Projects = ({ limit }) => {
             text="They help clients thrive online and offline with products, services and platforms that lead to sustainable growth between their unique brands and targeted markets."
             img={data.beeandbloom.childImageSharp.fluid}
             link="#"
-            linkText="Bee & Bloom"
           />
 
           <Project
@@ -150,7 +162,6 @@ const Projects = ({ limit }) => {
             text="The Number 12 Film is a project built for a client to showcase their biggest projects worked on."
             img={data.number.childImageSharp.fluid}
             link="https://number12film.com/"
-            linkText="The Number 12 Film"
           />
 
           <Project
@@ -158,7 +169,6 @@ const Projects = ({ limit }) => {
             text="Teach for Joy is a project i helped a colleague with the frontend UI Design and Development. It's a website where people post lectures or meet tutors who are willing to teach on their free time for free."
             img={data.teachforjoy.childImageSharp.fluid}
             link="https://www.teachforjoy.com/"
-            linkText="Teach For Joy"
           />
 
           <Project
@@ -166,7 +176,6 @@ const Projects = ({ limit }) => {
             text="Legend Frames is an online shop which is dedicated to providing first grade designer frames for all gender and age at an affordable price through the most convenient means."
             img={data.legend.childImageSharp.fluid}
             link="https://legendframes.netlify.com/"
-            linkText="Legend Frames"
           />
 
           <Project
@@ -174,7 +183,6 @@ const Projects = ({ limit }) => {
             text="A restaurant review app built to help customers review a restaurant meal. Project was developed mainly for reviewing meals and restaurants visited by customers."
             img={data.chow.childImageSharp.fluid}
             link="https://chowcourt.herokuapp.com/"
-            linkText="Dang That's Delicious"
           />
 
           <Project
@@ -182,7 +190,6 @@ const Projects = ({ limit }) => {
             text="Full Stack e-commerce project developed with NextJS, a ReactJS framework and ExpressJS, a NodeJS lightweight Framework with Authentication and stripe payment."
             img={data.ecowas.childImageSharp.fluid}
             link="https://ecowasstore-gules-sigma.now.sh/"
-            linkText="Ecowas Shop"
           />
 
           <Project
@@ -190,23 +197,20 @@ const Projects = ({ limit }) => {
             text="UI of Hulu.com built with TailwindCSS and Gulp"
             img={data.hulu.childImageSharp.fluid}
             link="https://huluwind.netlify.com/"
-            linkText="Hulu Wind"
           />
 
           <Project
             title="SignUp with Pricing Component"
             text="Signup with pricing UI I built for reusability sake and also shared them in a community where people will like to use them for their projects."
             img={data.signup.childImageSharp.fluid}
-            link="https://huluwind.netlify.com/"
-            linkText="Signup with Pricing"
+            link="#"
           />
 
           <Project
             title="SignUp & SignIn Component"
             text="Signup UI I built for reusability sake and also shared them in a community where people will like to use them for their projects."
             img={data.dev.childImageSharp.fluid}
-            link="https://huluwind.netlify.com/"
-            linkText="SignUp & SignIn"
+            link="#"
           />
         </div>
       )}

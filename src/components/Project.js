@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import Img from "gatsby-image"
 
-const Projects = ({ title, text, img, link, linkText }) => {
+const Projects = ({ title, text, img, link }) => {
   let app = useRef(null)
   let image = useRef(null)
   let contents = useRef(null)
@@ -67,7 +67,7 @@ const Projects = ({ title, text, img, link, linkText }) => {
               className="project-link text-base lg:text-lg"
               href={link}
             >
-              Visit {linkText}
+              Visit {title}
             </a>
           </div>
         </div>
