@@ -68,8 +68,8 @@ const SecondPage = () => {
       <div ref={el => (app = el)} className="mt-20 lg:mt-40 px-4 lg:px-0">
         <div ref={el => (contents = el)}>
           <h2 className="font-header text-3xl lg:text-5xl lg:w-120">
-            <div>Developing, Designing,</div>
-            <div>Traveling &amp; Music</div>
+            <div>I Design and,</div>
+            <div>Develop for the web.</div>
           </h2>
         </div>
 
@@ -84,8 +84,11 @@ const SecondPage = () => {
           <p>
             A self-taught Full-Stack Javascript Web Developer and UI/UX Designer
             from Accra, Ghana. I am super passionate about design, development,
-            traveling, a dreamer, and a fanatic of all things digital. I have
-            been very fortunate to be able to do all as a career.
+            traveling, and a fanatic of all things digital. I have been very
+            fortunate to be able to do all as a career.
+          </p>
+          <p className="font-bold">
+            I consider myself as a learner, a life-long learner.
           </p>
           <p>
             I <span className="line-through">drink</span> coffee, and I eat
