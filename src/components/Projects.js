@@ -104,7 +104,7 @@ const Projects = ({ limit }) => {
               benefit from the shared promise of agriculture in Africa, and
               beyond."
             img={data.completeFarmer.childImageSharp.fluid}
-            link="#"
+            link="https://completefarmer.com/
           />
 
           <Project
@@ -113,14 +113,14 @@ const Projects = ({ limit }) => {
               benefit from the shared promise of agriculture in Africa, and
               beyond."
             img={data.dashboard.childImageSharp.fluid}
-            link="#"
+            link="https://crowd.completefarmer.com/"
           />
 
           <Project
             title="Bee and Bloom Digital"
             text="They clients thrive online and offline with products, services and platforms that lead to sustainable growth between their unique brands and targeted markets."
             img={data.beeandbloom.childImageSharp.fluid}
-            link="#"
+            link="https://beeandbloom.digital"
           />
         </div>
       ) : (
@@ -131,7 +131,7 @@ const Projects = ({ limit }) => {
               benefit from the shared promise of agriculture in Africa, and
               beyond."
             img={data.dashboard.childImageSharp.fluid}
-            link="#"
+            link="https://crowd.completefarmer.com/"
           />
 
           <Project
@@ -140,7 +140,7 @@ const Projects = ({ limit }) => {
               benefit from the shared promise of agriculture in Africa, and
               beyond."
             img={data.completeFarmer.childImageSharp.fluid}
-            link="#"
+            link="https://completefarmer.com/"
           />
 
           <Project
@@ -154,7 +154,7 @@ const Projects = ({ limit }) => {
             title="Bee and Bloom Digital"
             text="They help clients thrive online and offline with products, services and platforms that lead to sustainable growth between their unique brands and targeted markets."
             img={data.beeandbloom.childImageSharp.fluid}
-            link="#"
+            link="https://beeandbloom.digital"
           />
 
           <Project
