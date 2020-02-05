@@ -140,7 +140,7 @@ const Projects = ({ limit }) => {
               benefit from the shared promise of agriculture in Africa, and
               beyond."
             img={data.completeFarmer.childImageSharp.fluid}
-            link="https://completefarmer.com/"
+            link="https://www.completefarmer.com/"
           />
 
           <Project
