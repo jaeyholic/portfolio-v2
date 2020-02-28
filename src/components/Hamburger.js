@@ -112,7 +112,7 @@ const Hamburger = ({ state }) => {
                     <a
                       onMouseEnter={e => handleHover(e)}
                       onMouseOut={e => handleHoverExit(e)}
-                      href="mailto:gabsco208309@hotmail.com"
+                      href="mailto:hello@jeffson.dev"
                     >
                       contact me
                     </a>
