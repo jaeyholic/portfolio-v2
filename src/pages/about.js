@@ -118,7 +118,7 @@ const SecondPage = () => {
             >
               Complete Farmer Limited
             </a>{" "}
-            as a Frontend Developer and also as a freelancer.
+            as a freelance Frontend Developer.
           </p>
         </div>
 
