@@ -11,9 +11,9 @@ const Contact = () => {
         <p className="font-display text-xl lg:text-2xl">Email me</p>
         <a
           className="mail-link text-base lg:text-lg"
-          href="mailto:gabsco208309@hotmail.com"
+          href="mailto:hello@jeffson.dev"
         >
-          Hello@jaeyholic.dev
+          hello@jaeyholic.dev
         </a>
       </div>
     </div>

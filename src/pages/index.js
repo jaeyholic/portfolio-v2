@@ -141,10 +141,10 @@ const IndexPage = () => {
           </p>
           <p className="mt-16">
             <a
-              className="pb-2 border-b-2 border-black text-2xl font-sans hover:transition-easy hover:border-b-0"
-              href="mailto:gabsco208309@hotmail.com"
+              className="pb-2 border-b-2 border-black text-2xl font-sans hover:transition-easy hover:border-b-0 mail-link"
+              href="mailto:hello@jeffson.dev"
             >
-              Say Hello: hello@jeffson.dev
+              Say hello: hello@jeffson.dev
             </a>
           </p>
         </div>
