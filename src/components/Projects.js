@@ -7,70 +7,70 @@ import Project from "./Project"
 const Projects = ({ limit }) => {
   const data = useStaticQuery(graphql`
     query {
-      dashboard: file(relativePath: { eq: "dashboard.png" }) {
+      dashboard: file(relativePath: { eq: "dashboard.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      completeFarmer: file(relativePath: { eq: "complete-farmer.png" }) {
+      completeFarmer: file(relativePath: { eq: "complete-farmer.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      onepager: file(relativePath: { eq: "onepager.png" }) {
+      onepager: file(relativePath: { eq: "onepager.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      beeandbloom: file(relativePath: { eq: "beeandbloom.png" }) {
+      beeandbloom: file(relativePath: { eq: "beeandbloom.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      chow: file(relativePath: { eq: "dang.png" }) {
+      chow: file(relativePath: { eq: "dang.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      number: file(relativePath: { eq: "number12.png" }) {
+      number: file(relativePath: { eq: "number12.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      teachforjoy: file(relativePath: { eq: "teachforjoy.png" }) {
+      teachforjoy: file(relativePath: { eq: "teachforjoy.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      legend: file(relativePath: { eq: "legendframes.png" }) {
+      legend: file(relativePath: { eq: "legendframes.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      hulu: file(relativePath: { eq: "hulu.png" }) {
+      hulu: file(relativePath: { eq: "hulu.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      ecowas: file(relativePath: { eq: "ecowas.png" }) {
+      ecowas: file(relativePath: { eq: "ecowas.webp" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
