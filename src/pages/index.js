@@ -9,10 +9,19 @@ import Contact from "../components/Contact"
 //images
 import Wave from "../images/waving.gif"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import {
+  Heading,
+  Text,
+  useColorMode,
+  Box,
+  Link,
+  Image,
+  Flex,
+} from "@chakra-ui/core"
 
 const IndexPage = () => {
   let app = useRef(null)
-  let image = useRef(null)
+  // let image = useRef(null)
   let contents = useRef(null)
   let overlay = useRef(null)
   let content = useRef(null)
@@ -59,16 +68,16 @@ const IndexPage = () => {
       css: { visibility: "visible" },
     })
 
-    //Image
-    tl.from(image, 1.7, { y: 20, ease: "power3.easeOut" }, "Start").from(
-      image.firstElementChild,
-      2,
-      {
-        scale: 1.6,
-        ease: "power3.easeOut",
-      },
-      1
-    )
+    // //Image
+    // tl.from(image, 1.7, { y: 20, ease: "power3.easeOut" }, "Start").from(
+    //   image.firstElementChild,
+    //   2,
+    //   {
+    //     scale: 1.6,
+    //     ease: "power3.easeOut",
+    //   },
+    //   1
+    // )
 
     tl.staggerFrom(
       [headlineFirst, headlineSecond, headlineThird, headlineFourth],
@@ -86,42 +95,63 @@ const IndexPage = () => {
       .from(paragraph2, 4.5, { y: 20, opacity: 0, ease: "power3.easeOut" }, 4.5)
   }, [tl])
 
+  const { colorMode } = useColorMode()
+
   return (
     <Layout>
       <SEO title="Front-End Developer, UI/UX Designer" />
 
-      <div ref={el => (overlay = el)} className="overlay">
-        <div className="flex flex-wrap justify-center items-center h-full">
-          <div
-            ref={el => (content = el)}
-            className="flex text-white font-sans text-2xl"
+      <Box
+        ref={(el) => (overlay = el)}
+        bg="gray.900"
+        w="100vw"
+        h="100vh"
+        pos="fixed"
+        zIndex="9999"
+        overflow="hidden"
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+      >
+        <Flex wrap="wrap" justify="center" align="center" h="100%">
+          <Flex
+            color="white"
+            fontFamily="sans"
+            fontSize="2xl"
+            ref={(el) => (content = el)}
           >
-            <div className="px-3">Designer </div>
-            <div className="px-3">Developer </div>
-            <div className="px-3">Traveler</div>
-          </div>
-        </div>
-      </div>
+            <Box className="px-3">Designer </Box>
+            <Box className="px-3">Developer </Box>
+            <Box className="px-3">Traveler</Box>
+          </Flex>
+        </Flex>
+      </Box>
 
-      <div ref={el => (app = el)} className="mt-20 lg:mt-40 invisible">
-        <div ref={el => (image = el)} className="block">
-          <img className="h-12" src={Wave} alt="Wave" />
-        </div>
-
-        <div
-          ref={el => (contents = el)}
-          className="w-full lg:w-127 px-4 lg:px-0"
+      <Box
+        mt={{ base: 20, lg: 40 }}
+        visibility="hidden"
+        ref={(el) => (app = el)}
+      >
+        <Box
+          ref={(el) => (contents = el)}
+          w={{ base: "100%", lg: 127 }}
+          px={{ base: 4, lg: 0 }}
         >
-          <h1
-            className="font-header text-3xl lg:text-5xl leading-none"
+          <Heading
+            as="h1"
+            fontFamily="header"
+            fontSize={{ base: "2xl", lg: "6xl" }}
+            lineHeight={{ base: "32px", lg: "75px" }}
             id="header"
+            color={colorMode === "light" ? "gray.800" : "gray.200"}
           >
-            <div>Hey there *waves*, my name is</div>
-            <div>Felix Yeboah - Jefferson, UI</div>
-            <div>designer, a developer and a</div>
-            <div>traveler.</div>
-          </h1>
-          <p className="text-xl leading-normal">
+            <Box>Hey there *waves*, I'm</Box>
+            <Box>Felix Yeboah - Jefferson,</Box>
+            <Box>UI designer, a developer </Box>
+            <Box>and a nomad.</Box>
+          </Heading>
+          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="30px">
             A self-taught full-stack javascript web developer &amp; a
             design-minded, focused on building beautiful interfaces &
             experiences
@@ -133,45 +163,55 @@ const IndexPage = () => {
             critical thinker who loves to find solutions to problems, not only
             in my line of work but also helps others who are struggling to find
             their feet in the designer's and developers' world.
-          </p>
-          <p className="text-xl leading-normal">
+          </Text>
+          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="30px">
             My inbox is always open for any opportunities, whether for a
             potential project or just to say hi, I'll try my best to answer your
             email!
-          </p>
-          <p className="mt-16">
-            <a
-              className="pb-2 border-b-2 border-black text-2xl font-sans hover:transition-easy hover:border-b-0 mail-link"
+          </Text>
+          <Text mt={16}>
+            <Link
+              pb={2}
+              borderBottomWidth={2}
+              borderBottomColor={colorMode === "light" ? "gray.800" : "white"}
+              color={colorMode === "light" ? "gray.800" : "white"}
+              _hover={{
+                borderBottomWidth: 0,
+                bg: colorMode === "light" ? "gray.600" : "gray.700",
+              }}
+              fontFamily="sans"
+              fontSize="2xl"
+              className="mail-link"
               href="mailto:hello@jeffson.dev"
             >
               Say hello: hello@jeffson.dev
-            </a>
-          </p>
-        </div>
-        <div>
-          <div className="mt-20">
+            </Link>
+          </Text>
+        </Box>
+        <Box>
+          <Box mt={20}>
             <Projects limit />
-          </div>
+          </Box>
 
-          <div className="text-center text-xl mt-6">
-            <button>
+          <Box textAlign="center" fontSize="xl" mt={6}>
+            <Box as="button">
               <AniLink
                 paintDrip
                 duration={1}
-                hex="#000"
+                hex="#171923"
                 className="project-link"
                 to="/projects"
               >
                 see all my projects
               </AniLink>
-            </button>
-          </div>
+            </Box>
+          </Box>
 
-          <div className="mt-40">
+          <Box mt={40}>
             <Contact />
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Box>
+      </Box>
     </Layout>
   )
 }

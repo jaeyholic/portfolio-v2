@@ -11,17 +11,37 @@ import PropTypes from "prop-types"
 import "./layout.css"
 import Nav from "./Nav"
 import Footer from "./Footer"
+import { useColorMode, Box } from "@chakra-ui/core"
 
 const Layout = ({ children }) => {
+  const { colorMode } = useColorMode()
+
+  const duration = 350
+
   return (
     <>
-      <div className="relative font-sans antialiased overflow-hidden border-t-8 border-yellow-500">
+      <Box
+        pos="relative"
+        fontFamily="sans"
+        borderTopWidth={8}
+        borderTopColor="yellow.400"
+        overflow="hidden"
+        color={colorMode === "light" ? "gray.700" : "gray.300"}
+        transition={
+          colorMode === "light"
+            ? `background ${duration}ms ease-out`
+            : `background ${duration}ms ease-in`
+        }
+        bg={colorMode === "light" ? "white" : "gray.900"}
+      >
         <Nav />
-        <div className="text-black">
-          <main className="container mx-auto">{children}</main>
+        <Box>
+          <Box mx="auto" className="container">
+            {children}
+          </Box>
           <Footer />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   )
 }

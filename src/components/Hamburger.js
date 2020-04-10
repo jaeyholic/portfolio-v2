@@ -9,6 +9,7 @@ import {
   handleHoverExit,
   staggerRevealClose,
 } from "./Animations.js"
+import { Box, Text, useColorMode } from "@chakra-ui/core"
 
 const Hamburger = ({ state }) => {
   // Create varibles of our dom nodes
@@ -46,84 +47,102 @@ const Hamburger = ({ state }) => {
   }, [state])
 
   return (
-    <div ref={el => (menuLayer = el)} className="hamburger-menu">
-      <div
-        ref={el => (reveal1 = el)}
+    <Box ref={(el) => (menuLayer = el)} className="hamburger-menu">
+      <Box
+        ref={(el) => (reveal1 = el)}
         className="menu-secondary-background-color"
-      ></div>
-      <div ref={el => (reveal2 = el)} className="menu-layer">
-        <div className="container mx-auto">
-          <div className="wrapper">
-            <div className="menu-links">
-              <nav className="m-0 p-0">
-                <ul className="block px-4 md:px-0">
-                  <li
-                    ref={el => (line1 = el)}
-                    className="text-4xl md:text-6xl lg:text-7xl w-full md:w-110 lg:w-125 relative overflow-hidden h-16 md:h-24 text-gray-900 pt-8"
+      ></Box>
+      <Box ref={(el) => (reveal2 = el)} className="menu-layer">
+        <Box mx="auto" className="container">
+          <Box className="wrapper">
+            <Box className="menu-links">
+              <Box as="nav" m={0} p={0}>
+                <Text
+                  as="ul"
+                  fontSize={{ base: "4xl", md: "6xl", lg: "7xl" }}
+                  d="block"
+                  w={{ base: "100%", md: 110, lg: 125 }}
+                  px={{ base: 4, md: 0 }}
+                  pos="relative"
+                  overflow="hidden"
+                  color="gray.800"
+                  pt={8}
+                >
+                  <Text
+                    as="li"
+                    ref={(el) => (line1 = el)}
+                    fontFamily="header"
+                    h={{ base: 16, md: 24 }}
                   >
                     <AniLink
                       paintDrip
                       duration={1}
-                      hex="#000"
+                      hex="#171923"
                       activeClassName="text-black"
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
                       to="/projects"
                     >
                       see my projects
                     </AniLink>
-                  </li>
-                  <li
-                    ref={el => (line2 = el)}
-                    className="text-4xl md:text-6xl lg:text-7xl w-full md:w-110 lg:w-125 relative overflow-hidden h-16 md:h-24 text-gray-900 pt-8"
+                  </Text>
+                  <Text
+                    as="li"
+                    ref={(el) => (line2 = el)}
+                    fontFamily="header"
+                    h={{ base: 16, md: 24 }}
                   >
                     <AniLink
                       paintDrip
                       duration={1}
-                      hex="#000"
+                      hex="#171923"
                       activeClassName="text-black"
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
                       to="/about"
                     >
                       more about me
                     </AniLink>
-                  </li>
-                  <li
-                    ref={el => (line3 = el)}
-                    className="text-4xl md:text-6xl lg:text-7xl w-full md:w-110 lg:w-125 relative overflow-hidden h-16 md:h-24 text-gray-900 pt-8"
+                  </Text>
+                  <Text
+                    as="li"
+                    ref={(el) => (line3 = el)}
+                    fontFamily="header"
+                    h={{ base: 16, md: 24 }}
                   >
                     <AniLink
                       paintDrip
                       duration={1}
-                      hex="#000"
+                      hex="#171923"
                       activeClassName="text-black"
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
                       to="/blogs"
                     >
                       my writings
                     </AniLink>
-                  </li>
-                  <li
-                    ref={el => (line4 = el)}
-                    className="text-4xl md:text-6xl lg:text-7xl w-full md:w-110 lg:w-125 relative overflow-hidden h-16 md:h-24 text-gray-900 pt-8"
+                  </Text>
+                  <Text
+                    as="li"
+                    ref={(el) => (line4 = el)}
+                    fontFamily="header"
+                    h={{ base: 16, md: 24 }}
                   >
                     <a
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
                       href="mailto:hello@jeffson.dev"
                     >
                       contact me
                     </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+                  </Text>
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   )
 }
 
