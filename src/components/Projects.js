@@ -7,7 +7,7 @@ import Project from "./Project"
 const Projects = ({ limit }) => {
   const data = useStaticQuery(graphql`
     query {
-      dashboard: file(relativePath: { eq: "dashboard.webp" }) {
+      dashboard: file(relativePath: { eq: "dashboard.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid

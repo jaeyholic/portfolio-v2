@@ -81,6 +81,7 @@ const Nav = () => {
 
           <Flex>
             <Box
+              mr={{ base: 4, md: 0 }}
               as="button"
               color={colorMode === "light" ? "gray.800" : "white"}
               className="menu"
@@ -90,13 +91,13 @@ const Nav = () => {
                 disabled={disabled}
                 onClick={handleMenu}
               >
-                Menu
+                {state.menuName}
               </button>
             </Box>
 
             <Box
               transition={colorMode && `all ${duration}ms ease`}
-              ml={{ base: 6, md: 4 }}
+              ml={{ md: 4 }}
               as="button"
               onClick={toggleColorMode}
             >
