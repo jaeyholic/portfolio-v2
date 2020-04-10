@@ -82,7 +82,7 @@ const Nav = () => {
           <Flex>
             <Box as="button" color={`mode.${colorMode}.nav`} className="menu">
               <button
-                className="focus:outline-none mr-4 md:mr-0"
+                className="focus:outline-none mr-3"
                 disabled={disabled}
                 onClick={handleMenu}
               >
@@ -92,7 +92,6 @@ const Nav = () => {
 
             <Box
               transition={colorMode && `all ${duration}ms ease`}
-              ml={{ md: 4 }}
               as="button"
               onClick={toggleColorMode}
             >
