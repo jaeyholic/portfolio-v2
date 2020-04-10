@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import gsap from "gsap"
 import Img from "gatsby-image"
+import { Box, Flex, Heading, Text, Link } from "@chakra-ui/core"
 
 const Projects = ({ title, text, img, link }) => {
   let app = useRef(null)
@@ -46,33 +47,44 @@ const Projects = ({ title, text, img, link }) => {
   }, [tl])
 
   return (
-    <div
-      ref={el => (app = el)}
-      className="flex flex-wrap my-16 lg:my-20 px-4 lg:px-0"
+    <Flex
+      wrap="wrap"
+      my={{ base: 16, lg: 20 }}
+      px={{ base: 4, lg: 0 }}
+      ref={(el) => (app = el)}
     >
-      <div className="w-full lg:w-3/5">
-        <div ref={el => (image = el)}>
+      <Box w={{ base: "100%", lg: 3 / 5 }}>
+        <Box ref={(el) => (image = el)}>
           <Img fluid={img} />
-        </div>
-      </div>
+        </Box>
+      </Box>
 
-      <div className="w-full lg:w-2/5 lg:pl-10 mt-4 lg:mt-0">
-        <div className="h-full flex justify-center items-center">
-          <div ref={el => (contents = el)}>
-            <h3 className="text-3xl">{title}</h3>
-            <p className="text-lg">{text}</p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link text-base lg:text-lg"
+      <Box
+        w={{ base: "100%", lg: 2 / 5 }}
+        pl={{ lg: 10 }}
+        mt={{ base: 4, lg: 0 }}
+      >
+        <Flex justify="center" align="center" h="100%">
+          <Box ref={(el) => (contents = el)}>
+            <Heading as="h3" fontSize="3xl">
+              {title}
+            </Heading>
+            <Text my={4} fontSize="lg">
+              {text}
+            </Text>
+            <Link
+              isExternal
+              fontSize={{ base: "base", lg: "lg" }}
+              textDecoration="none"
+              className="project-link"
               href={link}
             >
               Visit {title}
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Link>
+          </Box>
+        </Flex>
+      </Box>
+    </Flex>
   )
 }
 

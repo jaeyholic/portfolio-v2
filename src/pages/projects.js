@@ -5,6 +5,7 @@ import gsap from "gsap"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Projects from "../components/Projects"
+import { Box, Heading, useColorMode } from "@chakra-ui/core"
 
 const Portfolio = () => {
   let app = useRef(null)
@@ -34,22 +35,30 @@ const Portfolio = () => {
       "Start"
     )
   }, [tl])
+
+  const { colorMode } = useColorMode()
+
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <div ref={el => (app = el)} className="mt-20 invisible">
-        <div ref={el => (contents = el)} className="px-4 md:px-0">
-          <h2 className="font-header text-3xl lg:text-5xl lg:w-125">
-            <div>Projects I completed, projects I</div>
-            <div>contributed to and projects I </div>
-            <div>got featured on.</div>
-          </h2>
-        </div>
+      <Box mt={20} visibility="invisible" ref={(el) => (app = el)}>
+        <Box px={{ base: 4, lg: 0 }} ref={(el) => (contents = el)}>
+          <Heading
+            fontFamily="header"
+            fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
+            lineHeight="none"
+            color={`mode.${colorMode}.heading`}
+          >
+            <Box>Projects completed, projects</Box>
+            <Box>contributed to and projects</Box>
+            <Box>got featured on.</Box>
+          </Heading>
+        </Box>
 
-        <div>
+        <Box>
           <Projects />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </Layout>
   )
 }
