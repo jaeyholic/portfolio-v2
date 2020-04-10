@@ -79,6 +79,7 @@ const SecondPage = () => {
             fontFamily="header"
             fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
             w={{ lg: 127 }}
+            color={`mode.${colorMode}.heading`}
           >
             <Box>I Design and,</Box>
             <Box>Develop for the web.</Box>
