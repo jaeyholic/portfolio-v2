@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-chakra-ui`,
     {
       resolve: `gatsby-plugin-scroll-indicator`,
       options: {
@@ -39,21 +40,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/jaey-logo-favicon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: "gatsby-plugin-chakra-ui",
-      options: {
-        /**
-         * @property {boolean} [isResettingCSS=true]
-         * if false, this plugin will not use `<CSSReset />
-         */
-        isResettingCSS: false,
-        /**
-         * @property {boolean} [isUsingColorMode=true]
-         * if false, this plugin will not use <ColorModeProvider />
-         */
-        isUsingColorMode: true,
       },
     },
     {
