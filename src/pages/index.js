@@ -142,8 +142,9 @@ const IndexPage = () => {
             as="h1"
             fontFamily="header"
             fontSize={{ base: "2xl", lg: "6xl" }}
-            lineHeight={{ base: "32px", lg: "75px" }}
+            lineHeight={{ base: "tall", lg: "none" }}
             id="header"
+            mb={6}
             color={`mode.${colorMode}.heading`}
           >
             <Box>Hey there *waves*, I'm</Box>
@@ -151,7 +152,7 @@ const IndexPage = () => {
             <Box>UI designer, a developer </Box>
             <Box>and a nomad.</Box>
           </Heading>
-          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="30px">
+          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="short">
             A self-taught full-stack javascript web developer &amp; a
             design-minded, focused on building beautiful interfaces &
             experiences

@@ -1,58 +1,115 @@
 import React from "react"
+import { Heading, Box, Flex, Text, useColorMode } from "@chakra-ui/core"
 
 const Skills = () => {
+  const { colorMode } = useColorMode()
+
   return (
-    <div className="px-4 lg:px-0">
-      <h1 className="text-3xl lg:text-5xl font-display">My Skills.</h1>
+    <Box px={{ base: 4, lg: 0 }}>
+      <Heading
+        as="h1"
+        fontFamily="display"
+        fontSize={{ base: "3xl", lg: "5xl" }}
+      >
+        My Skills.
+      </Heading>
 
-      <div className="flex flex-wrap mt-10">
-        <div className="w-full md:w-1/2">
-          <div>
-            <h5 className="text-lg lg:text-2xl">UI Design</h5>
-            <ul className="text-gray-700 text-base lg:text-xl">
-              <li>Sketch</li>
-              <li>Adobe XD</li>
-            </ul>
-          </div>
+      <Flex wrap="wrap" mt={10}>
+        <Box w={{ base: "100%", lg: "50%" }}>
+          <Box mb={6}>
+            <Heading
+              as="h5"
+              fontSize={{ base: "lg", lg: "2xl" }}
+              fontFamily="medium"
+              mb={3}
+            >
+              UI Design
+            </Heading>
+            <Text
+              as="ul"
+              color={`mode.${colorMode}.list`}
+              fontSize={{ base: "base", lg: "xl" }}
+              lineHeight="none"
+            >
+              <Text as="li">Sketch</Text>
+              <Text as="li">Adobe XD</Text>
+            </Text>
+          </Box>
 
-          <div>
-            <h5 className="text-lg lg:text-2xl">Designs</h5>
-            <ul className="text-gray-700 text-base lg:text-xl">
-              <li>InDesign</li>
-              <li>Photoshop</li>
-              <li>Illustrator</li>
-            </ul>
-          </div>
+          <Box mb={6}>
+            <Heading
+              as="h5"
+              fontSize={{ base: "lg", lg: "2xl" }}
+              fontFamily="medium"
+              mb={3}
+            >
+              Designs
+            </Heading>
+            <Text
+              as="ul"
+              color={`mode.${colorMode}.list`}
+              fontSize={{ base: "base", lg: "xl" }}
+              lineHeight="none"
+            >
+              <Text as="li">InDesign</Text>
+              <Text as="li">Photoshop</Text>
+              <Text as="li">Illustrator</Text>
+            </Text>
+          </Box>
 
-          <div>
-            <h5 className="text-lg lg:text-2xl">Languages</h5>
-            <ul className="text-gray-700 text-base lg:text-xl">
-              <li>HTML & CSS</li>
-              <li>JavaScript (ES6)</li>
-              <li>TypeScript</li>
-            </ul>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2">
-          <div>
-            <h5 className="text-lg lg:text-2xl">Tools</h5>
-            <ul className="text-gray-700 text-base lg:text-xl">
-              <li>React</li>
-              <li>Vue</li>
-              <li>Express</li>
-              <li>Gatsby</li>
-              <li>Gridsome</li>
-              <li>Wordpress</li>
-              <li>Node.js</li>
-              <li>MongoDB</li>
-              <li>Git & Github</li>
-              <li>Chrome DevTools</li>
-              <li>Postman</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+          <Box>
+            <Heading
+              as="h5"
+              fontSize={{ base: "lg", lg: "2xl" }}
+              fontFamily="medium"
+              mb={3}
+            >
+              Languages
+            </Heading>
+            <Text
+              as="ul"
+              color={`mode.${colorMode}.list`}
+              fontSize={{ base: "base", lg: "xl" }}
+              lineHeight="none"
+            >
+              <Text as="li">HTML & CSS</Text>
+              <Text as="li">JavaScript (ES6)</Text>
+              <Text as="li">TypeScript</Text>
+            </Text>
+          </Box>
+        </Box>
+        <Box w={{ base: "100%", lg: "50%" }}>
+          <Box>
+            <Heading
+              as="h5"
+              fontSize={{ base: "lg", lg: "2xl" }}
+              fontFamily="medium"
+              mb={3}
+            >
+              Tools
+            </Heading>
+            <Text
+              as="ul"
+              color={`mode.${colorMode}.list`}
+              fontSize={{ base: "base", lg: "xl" }}
+              lineHeight="none"
+            >
+              <Text as="li">React</Text>
+              <Text as="li">Vue</Text>
+              <Text as="li">Express</Text>
+              <Text as="li">Gatsby</Text>
+              <Text as="li">Gridsome</Text>
+              <Text as="li">Wordpress</Text>
+              <Text as="li">Node.js</Text>
+              <Text as="li">MongoDB</Text>
+              <Text as="li">Git & Github</Text>
+              <Text as="li">Chrome DevTools</Text>
+              <Text as="li">Postman</Text>
+            </Text>
+          </Box>
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 

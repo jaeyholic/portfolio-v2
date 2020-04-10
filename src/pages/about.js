@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Skills from "../components/Skills"
 import Values from "../components/Values"
+import { Box, Heading, Text, useColorMode, Link, Flex } from "@chakra-ui/core"
 
 const SecondPage = () => {
   let app = useRef(null)
@@ -62,75 +63,107 @@ const SecondPage = () => {
     }
   `)
 
+  const { colorMode } = useColorMode()
+
   return (
     <Layout>
       <SEO title="About" />
-      <div ref={el => (app = el)} className="mt-20 lg:mt-40 px-4 lg:px-0">
-        <div ref={el => (contents = el)}>
-          <h2 className="font-header text-3xl lg:text-5xl lg:w-120">
-            <div>I Design and,</div>
-            <div>Develop for the web.</div>
-          </h2>
-        </div>
+      <Box
+        mt={{ base: 20, lg: 40 }}
+        px={{ base: 4, lg: 0 }}
+        ref={(el) => (app = el)}
+      >
+        <Box ref={(el) => (contents = el)}>
+          <Heading
+            as="h2"
+            fontFamily="header"
+            fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
+            w={{ lg: 127 }}
+          >
+            <Box>I Design and,</Box>
+            <Box>Develop for the web.</Box>
+          </Heading>
+        </Box>
 
-        <div
-          ref={el => (image = el)}
-          className="w-full overflow-hidden mx-auto mt-20"
+        <Box
+          w="100%"
+          overflow="hidden"
+          mx="auto"
+          mt={20}
+          ref={(el) => (image = el)}
         >
           <Img fluid={data.me.childImageSharp.fluid} />
-        </div>
+        </Box>
 
-        <div className="text-xl lg:text-2xl lg:w-135 mt-12 lg:mt-20 leading-snug">
-          <p>
+        <Box
+          fontSize={{ base: "xl", lg: "2xl" }}
+          w={{ lg: 135 }}
+          mt={{ base: 12, lg: 20 }}
+          lineHeight="short"
+          fontFamily="medium"
+        >
+          <Text>
             A self-taught Full-Stack Javascript Web Developer and UI/UX Designer
             from Accra, Ghana. I am super passionate about design, development,
             traveling, and a fanatic of all things digital. I have been very
             fortunate to be able to do all as a career.
-          </p>
-          <p className="font-bold">
+          </Text>
+          <Text fontFamily="header" color={`mode.${colorMode}.heading`}>
             I consider myself as a learner, a life-long learner.
-          </p>
-          <p>
-            I <span className="line-through">drink</span> coffee, and I eat
-            pizza. I listen to a lot of music. I write code and improve my
-            design and skills every day: a fast learner and a person who's
-            always humble to learn and grow in all areas. I feel honored to have
-            worked with extraordinary people, startups, and companies that
-            helped to improve not only my skills but also my life.
-          </p>
+          </Text>
+          <Text>
+            I{" "}
+            <Text as="span" textDecoration="line-through">
+              drink
+            </Text>{" "}
+            coffee, and I eat pizza. I listen to a lot of music. I write code
+            and improve my design and skills every day: a fast learner and a
+            person who's always humble to learn and grow in all areas. I feel
+            honored to have worked with extraordinary people, startups, and
+            companies that helped to improve not only my skills but also my
+            life.
+          </Text>
 
-          <p>
-            I <span className="font-bold">currently</span> work with{" "}
-            <a
-              className="text-gray-800 underline hover:text-gray-900"
-              target="_blank"
-              rel="noopener noreferrer"
+          <Text>
+            I{" "}
+            <Text as="span" fontFamily="medium">
+              currently
+            </Text>{" "}
+            work with{" "}
+            <Link
+              isExternal
+              color={`mode.${colorMode}.link`}
+              _hover={{ color: `mode.${colorMode}.heading` }}
+              textDecoration="underline"
+              fontFamily="medium"
               href="https://beeandbloom.digital"
             >
               Bee &amp; Bloom Digital
-            </a>{" "}
+            </Link>{" "}
             as a Frontend Developer &amp; UI/UX Designer &amp;{" "}
-            <a
-              className="text-gray-800 underline hover:text-gray-900"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              isExternal
+              color={`mode.${colorMode}.link`}
+              _hover={{ color: `mode.${colorMode}.heading` }}
+              textDecoration="underline"
+              fontFamily="medium"
               href="https://completefarmer.com"
             >
               Complete Farmer Limited
-            </a>{" "}
+            </Link>{" "}
             as a freelance Frontend Developer.
-          </p>
-        </div>
+          </Text>
+        </Box>
 
-        <div className="flex flex-wrap mt-20">
-          <div className="w-full lg:w-1/2">
+        <Flex wrap="wrap" mt={20}>
+          <Box w={{ base: "100%", lg: "50%" }}>
             <Skills />
-          </div>
-          <div className="w-full lg:w-1/2">
+          </Box>
+          <Box w={{ base: "100%", lg: "50%" }}>
             <Values />
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Flex>
+      </Box>
     </Layout>
   )
 }

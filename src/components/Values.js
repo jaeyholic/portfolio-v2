@@ -1,42 +1,93 @@
 import React from "react"
+import { useColorMode, Box, Heading, Text } from "@chakra-ui/core"
 
 const Values = () => {
+  const { colorMode } = useColorMode()
+
   return (
-    <div className="px-4 lg:px-0 mt-10 lg:mt-0">
-      <h1 className="text-3xl lg:text-5xl font-display">Values.</h1>
+    <Box px={{ base: 4, lg: 0 }} mt={{ base: 10, lg: 0 }}>
+      <Heading
+        as="h1"
+        fontSize={{ base: "3xl", lg: "5xl" }}
+        fontFamily="display"
+      >
+        Values.
+      </Heading>
 
-      <div className="mt-5 lg:mt-10">
-        <div>
-          <h5 className="text-lg lg:text-2xl">Good design is good business</h5>
-          <p className="text-gray-700 text-base lg:text-xl">
+      <Box mt={{ base: 5, lg: 10 }}>
+        <Box>
+          <Heading
+            as="h5"
+            fontFamily="medium"
+            fontSize={{ base: "lg", lg: "2xl" }}
+            mb={1}
+          >
+            Good design is good business
+          </Heading>
+          <Text
+            color={`mode.${colorMode}.list`}
+            fontSize={{ base: "base", lg: "xl" }}
+            lineHeight="normal"
+          >
             It’s not only about beauty, it has to work.
-          </p>
-        </div>
+          </Text>
+        </Box>
 
-        <div className="mt-5 lg:mt-10">
-          <h5 className="text-lg lg:text-2xl">Never not learning</h5>
-          <p className="text-gray-700 text-base lg:text-xl">
+        <Box mt={{ base: 5, lg: 10 }}>
+          <Heading
+            as="h5"
+            fontFamily="medium"
+            fontSize={{ base: "lg", lg: "2xl" }}
+            mb={1}
+          >
+            Never not learning
+          </Heading>
+          <Text
+            color={`mode.${colorMode}.list`}
+            fontSize={{ base: "base", lg: "xl" }}
+            lineHeight="normal"
+          >
             There’s always something new to learn.
-          </p>
-        </div>
+          </Text>
+        </Box>
 
-        <div className="mt-5 lg:mt-10">
-          <h5 className="text-lg lg:text-2xl">
+        <Box mt={{ base: 5, lg: 10 }}>
+          <Heading
+            as="h5"
+            fontFamily="medium"
+            fontSize={{ base: "lg", lg: "2xl" }}
+            mb={1}
+          >
             Get to the root of the problem
-          </h5>
-          <p className="text-gray-700 text-base lg:text-xl">
+          </Heading>
+          <Text
+            color={`mode.${colorMode}.list`}
+            fontSize={{ base: "base", lg: "xl" }}
+            lineHeight="normal"
+          >
             To come up with the best solution.
-          </p>
-        </div>
+          </Text>
+        </Box>
 
-        <div className="mt-5 lg:mt-10">
-          <h5 className="text-lg lg:text-2xl">Keep it simple</h5>
-          <p className="text-gray-700 text-base lg:text-xl">
+        <Box mt={{ base: 5, lg: 10 }}>
+          <Heading
+            as="h5"
+            fontFamily="medium"
+            fontSize={{ base: "lg", lg: "2xl" }}
+            mb={1}
+          >
+            Keep it simple
+          </Heading>
+          <Text
+            color={`mode.${colorMode}.list`}
+            fontSize={{ base: "base", lg: "xl" }}
+            lineHeight="normal"
+          >
             Why make it complicated?
-          </p>
-        </div>
-      </div>
-    </div>
+          </Text>
+        </Box>
+      </Box>
+    </Box>
   )
 }
 
