@@ -26,6 +26,23 @@ const customTheme = {
     "7xl": "5rem",
     "8xl": "6rem",
   },
+  colors: {
+    ...theme.colors,
+    mode: {
+      light: {
+        text: "#2D3748",
+        bg: "#ffffff",
+        nav: "#1A202C",
+        heading: "#171923",
+      },
+      dark: {
+        text: "#CBD5E0",
+        bg: "#171923",
+        nav: "#ffffff",
+        heading: "#ffffff",
+      },
+    },
+  },
   space: {
     ...theme.space,
     "60": "15rem",

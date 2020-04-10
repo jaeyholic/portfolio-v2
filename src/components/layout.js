@@ -26,13 +26,13 @@ const Layout = ({ children }) => {
         borderTopWidth={8}
         borderTopColor="yellow.400"
         overflow="hidden"
-        color={colorMode === "light" ? "gray.700" : "gray.300"}
+        color={`mode.${colorMode}.text`}
         transition={
           colorMode === "light"
             ? `background ${duration}ms ease-out`
             : `background ${duration}ms ease-in`
         }
-        bg={colorMode === "light" ? "white" : "gray.900"}
+        bg={`mode.${colorMode}.bg`}
       >
         <Nav />
         <Box>

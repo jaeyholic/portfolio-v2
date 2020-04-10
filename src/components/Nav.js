@@ -70,7 +70,7 @@ const Nav = () => {
           <Box>
             <Link
               as={ReachLink}
-              color={colorMode === "light" ? "gray.800" : "white"}
+              color={`mode.${colorMode}.nav`}
               fontFamily="display"
               fontSize="4xl"
               to="/"
@@ -80,14 +80,9 @@ const Nav = () => {
           </Box>
 
           <Flex>
-            <Box
-              mr={{ base: 4, md: 0 }}
-              as="button"
-              color={colorMode === "light" ? "gray.800" : "white"}
-              className="menu"
-            >
+            <Box as="button" color={`mode.${colorMode}.nav`} className="menu">
               <button
-                className="focus:outline-none"
+                className="focus:outline-none mr-4 md:mr-0"
                 disabled={disabled}
                 onClick={handleMenu}
               >

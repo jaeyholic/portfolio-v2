@@ -144,7 +144,7 @@ const IndexPage = () => {
             fontSize={{ base: "2xl", lg: "6xl" }}
             lineHeight={{ base: "32px", lg: "75px" }}
             id="header"
-            color={colorMode === "light" ? "gray.800" : "gray.200"}
+            color={`mode.${colorMode}.heading`}
           >
             <Box>Hey there *waves*, I'm</Box>
             <Box>Felix Yeboah - Jefferson,</Box>
@@ -173,8 +173,8 @@ const IndexPage = () => {
             <Link
               pb={2}
               borderBottomWidth={2}
-              borderBottomColor={colorMode === "light" ? "gray.800" : "white"}
-              color={colorMode === "light" ? "gray.800" : "white"}
+              borderBottomColor={`mode.${colorMode}.heading`}
+              color={`mode.${colorMode}.heading`}
               _hover={{
                 borderBottomWidth: 0,
                 bg: colorMode === "light" ? "gray.600" : "gray.700",
