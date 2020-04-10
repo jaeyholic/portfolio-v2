@@ -96,7 +96,7 @@ const Nav = () => {
 
             <Box
               transition={colorMode && `all ${duration}ms ease`}
-              ml={4}
+              ml={{ base: 6, md: 4 }}
               as="button"
               onClick={toggleColorMode}
             >

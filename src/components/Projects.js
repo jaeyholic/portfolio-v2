@@ -14,63 +14,63 @@ const Projects = ({ limit }) => {
           }
         }
       }
-      completeFarmer: file(relativePath: { eq: "complete-farmer.webp" }) {
+      completeFarmer: file(relativePath: { eq: "complete-farmer.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      onepager: file(relativePath: { eq: "onepager.webp" }) {
+      onepager: file(relativePath: { eq: "onepager.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      beeandbloom: file(relativePath: { eq: "beeandbloom.webp" }) {
+      beeandbloom: file(relativePath: { eq: "beeandbloom.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      chow: file(relativePath: { eq: "dang.webp" }) {
+      chow: file(relativePath: { eq: "dang.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      number: file(relativePath: { eq: "number12.webp" }) {
+      number: file(relativePath: { eq: "number12.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      teachforjoy: file(relativePath: { eq: "teachforjoy.webp" }) {
+      teachforjoy: file(relativePath: { eq: "teachforjoy.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      legend: file(relativePath: { eq: "legendframes.webp" }) {
+      legend: file(relativePath: { eq: "legendframes.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      hulu: file(relativePath: { eq: "hulu.webp" }) {
+      hulu: file(relativePath: { eq: "hulu.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      ecowas: file(relativePath: { eq: "ecowas.webp" }) {
+      ecowas: file(relativePath: { eq: "ecowas.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
