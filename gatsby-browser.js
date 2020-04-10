@@ -6,13 +6,18 @@
 
 // You can delete this file if you're not using it
 
-// import { ThemeProvider } from "@chakra-ui/core"
-// import theme from "./src/gatsby-plugin-chakra-ui/theme"
-
-// ;<ThemeProvider theme={theme}>
-//   <CSSReset />
-//   <ColorModeProvider>{element}</ColorModeProvider>
-// </ThemeProvider>
+import React from "react"
+import { ThemeProvider, ColorModeProvider, CSSReset } from "@chakra-ui/core"
+import theme from "./src/gatsby-plugin-chakra-ui/theme"
 
 import "./tailwind.css"
 import "./index.scss"
+
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>
+    <ColorModeProvider>
+      <CSSReset />
+      {element}
+    </ColorModeProvider>
+  </ThemeProvider>
+)
