@@ -103,7 +103,7 @@ const SecondPage = () => {
           lineHeight="short"
           fontFamily="medium"
         >
-          <Text>
+          <Text lineHeight="40px">
             A self-taught Full-Stack Javascript Web Developer and UI/UX Designer
             from Accra, Ghana. I am super passionate about design, development,
             traveling, and a fanatic of all things digital. I have been very
@@ -114,7 +114,7 @@ const SecondPage = () => {
           </Text>
           <Text>
             I{" "}
-            <Text as="span" textDecoration="line-through">
+            <Text as="span" lineHeight="40px" textDecoration="line-through">
               drink
             </Text>{" "}
             coffee, and I eat pizza. I listen to a lot of music. I write code
@@ -125,7 +125,7 @@ const SecondPage = () => {
             life.
           </Text>
 
-          <Text>
+          <Text lineHeight="40px">
             I{" "}
             <Text as="span" fontFamily="medium">
               currently

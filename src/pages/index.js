@@ -152,7 +152,7 @@ const IndexPage = () => {
             <Box>UI designer, a developer </Box>
             <Box>and a nomad.</Box>
           </Heading>
-          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="short">
+          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="35px">
             A self-taught full-stack javascript web developer &amp; a
             design-minded, focused on building beautiful interfaces &
             experiences
@@ -165,7 +165,7 @@ const IndexPage = () => {
             in my line of work but also helps others who are struggling to find
             their feet in the designer's and developers' world.
           </Text>
-          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="30px">
+          <Text fontSize={{ base: "base", lg: "xl" }} lineHeight="35px">
             My inbox is always open for any opportunities, whether for a
             potential project or just to say hi, I'll try my best to answer your
             email!
