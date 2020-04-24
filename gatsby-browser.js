@@ -15,6 +15,9 @@ import "./index.scss"
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
-    <ColorModeProvider>{element}</ColorModeProvider>
+    <ColorModeProvider>
+      <CSSReset />
+      {element}
+    </ColorModeProvider>
   </ThemeProvider>
 )
