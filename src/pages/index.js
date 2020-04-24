@@ -141,8 +141,8 @@ const IndexPage = () => {
           <Heading
             as="h1"
             fontFamily="header"
-            fontSize={{ base: "2xl", lg: "6xl" }}
-            lineHeight={{ base: "tall", lg: "none" }}
+            fontSize={{ base: "2xl", md: "5xl", lg: "6xl" }}
+            lineHeight={{ base: "tall", md: "normal", lg: "none" }}
             id="header"
             mb={6}
             color={`mode.${colorMode}.heading`}
