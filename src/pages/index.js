@@ -108,7 +108,7 @@ const IndexPage = () => {
         <Flex wrap="wrap" justify="center" align="center" h="100%">
           <Flex
             color="white"
-            fontFamily="sans"
+            fontFamily="uses"
             fontSize="2xl"
             ref={(el) => (content = el)}
           >
