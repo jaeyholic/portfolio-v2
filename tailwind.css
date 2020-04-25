@@ -28,6 +28,30 @@
   font-weight: 800;
 }
 
+@font-face {
+  font-family: OperatorMono;
+  src: url("./src/fonts/Operator\ Mono\ Book\ Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OperatorMonoItalic;
+  src: url("./src/fonts/Operator\ Mono\ Bold\ Italic.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OperatorMonoMedium;
+  src: url("./src/fonts/Operator\ Mono\ Medium\ Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OperatorMonoBold;
+  src: url("./src/fonts/Operator\ Mono\ Bold\ Regular.otf");
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
 }
@@ -217,4 +241,8 @@ figure {
 .image-hover {
   cursor: pointer;
   height: 100%;
+}
+
+::selection {
+  background-color: #ffc600;
 }

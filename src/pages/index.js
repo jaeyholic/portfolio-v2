@@ -7,17 +7,8 @@ import Projects from "../components/Projects"
 import Contact from "../components/Contact"
 
 //images
-import Wave from "../images/waving.gif"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import {
-  Heading,
-  Text,
-  useColorMode,
-  Box,
-  Link,
-  Image,
-  Flex,
-} from "@chakra-ui/core"
+import { Heading, Text, useColorMode, Box, Link, Flex } from "@chakra-ui/core"
 
 const IndexPage = () => {
   let app = useRef(null)

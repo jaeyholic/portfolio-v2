@@ -18,6 +18,10 @@ const customTheme = {
     medium: '"CircularStdMedium" ,sans-serif',
     post: '"Merriweather", sans-serif',
     sans: '"CircularStd", sans-serif',
+    uses: '"OperatorMono", sans-serif',
+    link: '"OperatorMonoItalic", sans-serif',
+    list: '"OperatorMonoMedium", sans-serif',
+    bold: '"OperatorMonoBold", sans-serif',
   },
   fontSizes: {
     ...theme.fontSizes,
@@ -36,6 +40,7 @@ const customTheme = {
         heading: "#171923",
         link: "#1A202C",
         list: "#4A5568",
+        listItem: "#ffc600",
       },
       dark: {
         text: "#CBD5E0",
@@ -44,6 +49,7 @@ const customTheme = {
         heading: "#ffffff",
         link: "#E2E8F0",
         list: "#718096",
+        listItem: "#ffc600",
       },
     },
   },

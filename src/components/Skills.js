@@ -74,7 +74,7 @@ const Skills = () => {
             >
               <Text as="li">HTML & CSS</Text>
               <Text as="li">JavaScript (ES6)</Text>
-              <Text as="li">TypeScript</Text>
+              <Text as="li">Python</Text>
             </Text>
           </Box>
         </Box>
@@ -86,7 +86,7 @@ const Skills = () => {
               fontFamily="medium"
               mb={3}
             >
-              Tools
+              Frameworks &amp; Tools
             </Heading>
             <Text
               as="ul"
@@ -96,12 +96,13 @@ const Skills = () => {
             >
               <Text as="li">React</Text>
               <Text as="li">Vue</Text>
-              <Text as="li">Express</Text>
+              <Text as="li">Django</Text>
+              <Text as="li">Django Rest FrameWork</Text>
               <Text as="li">Gatsby</Text>
               <Text as="li">Gridsome</Text>
               <Text as="li">Wordpress</Text>
-              <Text as="li">Node.js</Text>
-              <Text as="li">MongoDB</Text>
+              <Text as="li">TailwindCSS</Text>
+              <Text as="li">Chakra-UI</Text>
               <Text as="li">Git & Github</Text>
               <Text as="li">Chrome DevTools</Text>
               <Text as="li">Postman</Text>

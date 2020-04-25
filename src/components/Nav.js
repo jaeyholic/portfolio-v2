@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { globalHistory } from "@reach/router/lib/history"
 import { Link as ReachLink } from "gatsby"
 import Hamburger from "./Hamburger"
-import { Flex, Box, Link, useColorMode, Button } from "@chakra-ui/core"
+import { Flex, Box, Link, useColorMode } from "@chakra-ui/core"
 import MemoMoon from "./Moon"
 import MemoSun from "./Sun"
 
@@ -71,9 +71,10 @@ const Nav = () => {
             <Link
               as={ReachLink}
               color={`mode.${colorMode}.nav`}
-              fontFamily="display"
+              fontFamily="bold"
               fontSize="4xl"
               to="/"
+              _hover={{ textDecor: "none" }}
             >
               Jeff.son
             </Link>

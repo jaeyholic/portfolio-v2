@@ -18,7 +18,6 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-transition-link`,
-    `gatsby-plugin-chakra-ui`,
     {
       resolve: `gatsby-plugin-scroll-indicator`,
       options: {

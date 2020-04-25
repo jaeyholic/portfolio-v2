@@ -27,8 +27,8 @@ export const staggerRevealClose = (node1, node2) => {
 }
 
 // STAGGER THE LINKS TO APPEAR
-export const staggerText = (node1, node2, node3, node4) => {
-  gsap.from([node1, node2, node3, node4], {
+export const staggerText = (node1, node2, node3, node4, node5) => {
+  gsap.from([node1, node2, node3, node4, node5], {
     duration: 0.8,
     y: 100,
     delay: 0.1,
@@ -40,7 +40,7 @@ export const staggerText = (node1, node2, node3, node4) => {
 }
 
 // Fade up for the additonal info on our menu
-export const fadeInUp = node => {
+export const fadeInUp = (node) => {
   gsap.from(node, {
     y: 60,
     duration: 1,
@@ -51,7 +51,7 @@ export const fadeInUp = node => {
 }
 
 // Hover on the link
-export const handleHover = e => {
+export const handleHover = (e) => {
   gsap.to(e.target, {
     duration: 0.3,
     y: 3,
@@ -61,7 +61,7 @@ export const handleHover = e => {
 }
 
 // Hover off the link
-export const handleHoverExit = e => {
+export const handleHoverExit = (e) => {
   gsap.to(e.target, {
     duration: 0.3,
     y: -3,
@@ -89,7 +89,7 @@ export const handleCity = (city, target) => {
 }
 
 // Removes the city image once you hover off
-export const handleCityReturn = target => {
+export const handleCityReturn = (target) => {
   gsap.to(target, {
     duration: 0,
     skewY: 0,

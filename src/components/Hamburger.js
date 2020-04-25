@@ -9,7 +9,7 @@ import {
   handleHoverExit,
   staggerRevealClose,
 } from "./Animations.js"
-import { Box, Text, useColorMode } from "@chakra-ui/core"
+import { Box, Text } from "@chakra-ui/core"
 
 const Hamburger = ({ state }) => {
   // Create varibles of our dom nodes
@@ -20,6 +20,7 @@ const Hamburger = ({ state }) => {
   let line2 = useRef(null)
   let line3 = useRef(null)
   let line4 = useRef(null)
+  let line5 = useRef(null)
 
   useEffect(() => {
     // If the menu is open and we click the menu button to close it.
@@ -42,7 +43,7 @@ const Hamburger = ({ state }) => {
         height: "100%",
       })
       staggerReveal(reveal1, reveal2)
-      staggerText(line1, line2, line3, line4)
+      staggerText(line1, line2, line3, line4, line5)
     }
   }, [state])
 
@@ -125,6 +126,24 @@ const Hamburger = ({ state }) => {
                   <Text
                     as="li"
                     ref={(el) => (line4 = el)}
+                    fontFamily="header"
+                    h={{ base: 16, md: 24 }}
+                  >
+                    <AniLink
+                      paintDrip
+                      duration={1}
+                      hex="#171923"
+                      activeClassName="text-black"
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
+                      to="/uses"
+                    >
+                      my uses
+                    </AniLink>
+                  </Text>
+                  <Text
+                    as="li"
+                    ref={(el) => (line5 = el)}
                     fontFamily="header"
                     h={{ base: 16, md: 24 }}
                   >

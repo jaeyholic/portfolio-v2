@@ -76,6 +76,7 @@ const Projects = ({ title, text, img, link }) => {
               isExternal
               fontSize={{ base: "base", lg: "lg" }}
               textDecoration="none"
+              _hover={{ textDecor: "none" }}
               className="project-link"
               href={link}
             >
