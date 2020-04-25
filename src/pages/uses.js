@@ -14,6 +14,7 @@ import {
 import Editors from "../components/uses/Editors"
 import DesktopApps from "../components/uses/DesktopApps"
 import Services from "../components/uses/Services"
+import Devices from "../components/uses/Devices"
 
 const Uses = () => {
   const { colorMode } = useColorMode()
@@ -63,6 +64,7 @@ const Uses = () => {
           <Stack>
             <Editors />
             <DesktopApps />
+            <Devices />
             <Services />
           </Stack>
         </Box>
