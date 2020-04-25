@@ -29,7 +29,7 @@ const Uses = () => {
       >
         <Heading
           as="h1"
-          fontFamily="link"
+          fontFamily="bold"
           fontSize={{ base: "2xl", md: "5xl", lg: "6xl" }}
           lineHeight={{ base: "tall", md: "normal", lg: "none" }}
           id="header"
