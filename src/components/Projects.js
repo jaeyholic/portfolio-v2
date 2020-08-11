@@ -7,21 +7,21 @@ import Project from "./Project"
 const Projects = ({ limit }) => {
   const data = useStaticQuery(graphql`
     query {
-      dashboard: file(relativePath: { eq: "dashboard.png" }) {
+      dashboard: file(relativePath: { eq: "dashboard.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      completeFarmer: file(relativePath: { eq: "complete-farmer.png" }) {
+      completeFarmer: file(relativePath: { eq: "complete-farmer.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      onepager: file(relativePath: { eq: "onepager.png" }) {
+      onepager: file(relativePath: { eq: "onepager.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -35,21 +35,29 @@ const Projects = ({ limit }) => {
           }
         }
       }
-      chow: file(relativePath: { eq: "dang.png" }) {
+
+      eae: file(relativePath: { eq: "eae.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      number: file(relativePath: { eq: "number12.png" }) {
+      chow: file(relativePath: { eq: "dang.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      teachforjoy: file(relativePath: { eq: "teachforjoy.png" }) {
+      number: file(relativePath: { eq: "number12.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      teachforjoy: file(relativePath: { eq: "teachforjoy.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -63,28 +71,28 @@ const Projects = ({ limit }) => {
           }
         }
       }
-      hulu: file(relativePath: { eq: "hulu.png" }) {
+      hulu: file(relativePath: { eq: "hulu.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      ecowas: file(relativePath: { eq: "ecowas.png" }) {
+      ecowas: file(relativePath: { eq: "ecowas.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      signup: file(relativePath: { eq: "signup.png" }) {
+      signup: file(relativePath: { eq: "signup.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      dev: file(relativePath: { eq: "dev-signup.png" }) {
+      dev: file(relativePath: { eq: "dev-signup.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
@@ -98,6 +106,13 @@ const Projects = ({ limit }) => {
     <div>
       {limit ? (
         <div>
+          <Project
+            title="Albert Essamuah Associates Limited (AEA)"
+            text="A firm of Architects practicing Built Environment Consultancy with the capacity and expertise to provide a complete range of consulting services in the construction industry from project conception to the management of the completed facility."
+            img={data.eae.childImageSharp.fluid}
+            link="https://eae.vercel.app"
+          />
+
           <Project
             title="Complete Farmer"
             text="They are building a future where everyone can contribute and
@@ -115,16 +130,16 @@ const Projects = ({ limit }) => {
             img={data.dashboard.childImageSharp.fluid}
             link="https://crowd.completefarmer.com"
           />
-
-          <Project
-            title="Bee and Bloom Digital"
-            text="They clients thrive online and offline with products, services and platforms that lead to sustainable growth between their unique brands and targeted markets."
-            img={data.beeandbloom.childImageSharp.fluid}
-            link="https://beeandbloom.digital"
-          />
         </div>
       ) : (
         <div>
+          <Project
+            title="Albert Essamuah Associates Limited (AEA)"
+            text="A firm of Architects practicing Built Environment Consultancy with the capacity and expertise to provide a complete range of consulting services in the construction industry from project conception to the management of the completed facility."
+            img={data.eae.childImageSharp.fluid}
+            link="https://eae.vercel.app"
+          />
+
           <Project
             title="CrowdFarmer Dashboard"
             text="They are building a future where everyone can contribute and
