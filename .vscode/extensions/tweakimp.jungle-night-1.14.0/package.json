@@ -1,0 +1,39 @@
+{
+	"name": "jungle-night",
+	"displayName": "Jungle Night",
+	"description": "Dark VSCode Theme. Easy on your eyes.",
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#1E2428",
+		"theme": "dark"
+	},
+	"version": "1.14.0",
+	"engines": {
+		"vscode": "^1.38.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"publisher": "tweakimp",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tweakimp/jungle-night.git"
+	},
+	"bugs": {
+		"url": "https://github.com/tweakimp/jungle-night/issues"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Jungle Night",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Jungle Night-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "04ff46c7-ebac-40bc-aa66-bdd2e755c625",
+		"publisherId": "c5f50103-80f9-43a8-87cb-571212cdf14a",
+		"publisherDisplayName": "tweakimp"
+	}
+}

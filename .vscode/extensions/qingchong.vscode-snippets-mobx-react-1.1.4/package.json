@@ -1,0 +1,49 @@
+{
+	"name": "vscode-snippets-mobx-react",
+	"displayName": "Mobx/Rematch React Snippets and taro react hooks",
+	"description": "a snipperts at mobx react, rematch react, taro react hooks",
+	"version": "1.1.4",
+	"publisher": "qingchong",
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"icon": "images/mobx_logon.png",
+	"categories": [
+		"Snippets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/WebCaiQingChong/vscode-snippets-mobx-react"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"chalk": "^2.4.1",
+		"inquirer": "^6.2.0",
+		"semver": "^5.6.0",
+		"shelljs": "^0.8.2"
+	},
+	"__metadata": {
+		"id": "e7fdd746-2eed-41f6-9625-12957bdb5065",
+		"publisherId": "68a54302-89b6-4d7f-9d0b-029c5587e18e",
+		"publisherDisplayName": "qingchong"
+	}
+}

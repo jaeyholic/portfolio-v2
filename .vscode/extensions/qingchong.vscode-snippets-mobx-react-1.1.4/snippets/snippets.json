@@ -1,0 +1,392 @@
+{
+  "import": {
+    "prefix": "imp",
+    "body": "import ${2:moduleName} from '${1:module}'$0"
+  },
+  "importNoModuleName": {
+    "prefix": "imn",
+    "body": "import '${1:module}'$0"
+  },
+  "importDestructing": {
+    "prefix": "imd",
+    "body": "import { $2 } from '${1:module}'$0"
+  },
+  "exportDefault": {
+    "prefix": "exp",
+    "body": "export default $1$0"
+  },
+  "exportNamedFunction": {
+    "prefix": "enf",
+    "body": ["export const ${1:functionName} = (${2:params}) => {", "  $0", "}", ""],
+    "description": "Export named function in ES7 syntax"
+  },
+  "exportDefaultFunction": {
+    "prefix": "edf",
+    "body": ["export default (${1:params}) => {", "  $0", "}", ""],
+    "description": "Export default function in ES7 syntax"
+  },
+  "method": {
+    "prefix": "met",
+    "body": ["${1:methodName} = (${2:params}) => {", "  ${0}", "}", ""],
+    "description": "Creates a method inside a class in ES7 syntax"
+  },
+  "forEach": {
+    "prefix": "fre",
+    "body": ["${1:array}.forEach(${2:currentItem} => {", "  ${0}", "})", ""],
+    "description": "Creates a forEach statement in ES7 syntax"
+  },
+  "forOf": {
+    "prefix": "fof",
+    "body": ["for(let ${1:item} of ${2:object}) {", "  ${0}", "}", ""],
+    "description": "Iterating over property names of iterable objects"
+  },
+  "forIn": {
+    "prefix": "fin",
+    "body": ["for(let ${1:item} in ${2:object}) {", "  ${0}", "}", ""],
+    "description": "Iterating over property values of iterable objects"
+  },
+  "setInterval": {
+    "prefix": "sti",
+    "body": ["setInterval(() => {", "  ${2}", "}, ${0:intervalInms})", ""],
+    "description": "Executes the given function at specified intervals in ES7 syntax"
+  },
+  "setTimeOut": {
+    "prefix": "sto",
+    "body": ["setTimeout(() => {", "  ${2}", "}, ${1:delayInms})", ""],
+    "description": "Executes the given function after the specified delay in ES7 syntax"
+  },
+  "promise": {
+    "prefix": "prom",
+    "body": ["return new Promise((resolve, reject) => {", "  ${1}", "})", ""],
+    "description": "Creates and returns a new Promise in the standard ES7 syntax"
+  },
+  "destructProps": {
+    "prefix": "cp",
+    "body": ["const { $1 } = this.props"],
+    "description": "Creates and assigns a local variable using props destructing"
+  },
+  "destructState": {
+    "prefix": "cs",
+    "body": ["const { $1 } = this.state"],
+    "description": "Creates and assigns a local variable using state destructing"
+  },
+  "emptyState": {
+    "prefix": "est",
+    "body": ["state = {", "  $1", "}", ""],
+    "description": "Creates empty state object. To be used in a constructor."
+  },
+  "componentWillMount": {
+    "prefix": "cwm",
+    "body": ["componentWillMount = () => {", "  $0", "}", ""],
+    "description": "DEPRECATED!!!. Invoked once, both on the client and server, immediately before the initial rendering occurs"
+  },
+  "componentDidMount": {
+    "prefix": "cdm",
+    "body": ["componentDidMount = () => {", "  $0", "}", ""],
+    "description": "Invoked once, only on the client (not on the server), immediately after the initial rendering occurs."
+  },
+  "shouldComponentUpdate": {
+    "prefix": "scu",
+    "body": ["shouldComponentUpdate = (nextProps, nextState) => {", "  $0", "}", ""],
+    "description": "Invoked before rendering when new props or state are being received. "
+  },
+  "componentWillUpdate": {
+    "prefix": "cwup",
+    "body": ["componentWillUpdate = (nextProps, nextState) => {", "  $0", "}", ""],
+    "description": "DEPRECATED!!!. Invoked immediately before rendering when new props or state are being received."
+  },
+  "componentDidUpdate": {
+    "prefix": "cdup",
+    "body": ["componentDidUpdate = (prevProps, prevState) => {", "  $0", "}", ""],
+    "description": "Invoked immediately after the component's updates are flushed to the DOM."
+  },
+  "componentWillUnmount": {
+    "prefix": "cwun",
+    "body": ["componentWillUnmount = () => {", "  $0", "}", ""],
+    "description": "Invoked immediately before a component is unmounted from the DOM."
+  },
+  "getDerivedStateFromProps": {
+    "prefix": "gdsfp",
+    "body": ["static getDerivedStateFromProps(nextProps, prevState) {", "  ${1}", "}"],
+    "description": "Invoked after a component is instantiated as well as when it receives new props."
+  },
+  "getSnapshotBeforeUpdate": {
+    "prefix": "gsbu",
+    "body": ["getSnapshotBeforeUpdate = (prevProps, prevState) => {", "  $0", "}", ""],
+    "description": "Called right before mutations are made (e.g. before the DOM is updated)"
+  },
+  "componentRender": {
+    "prefix": "ren",
+    "body": ["render() {", "  return (", "    <div>", "      $0", "    </div>", "  )", "}"],
+    "description": "Basic render."
+  },
+  "componentSetStateObject": {
+    "prefix": "sst",
+    "body": "this.setState({$0})",
+    "description": "Performs a shallow merge of nextState into current state"
+  },
+  "componentSetStateFunc": {
+    "prefix": "ssf",
+    "body": ["this.setState((state, props) => { return { $0 }})", ""],
+    "description": "Performs a shallow merge of nextState into current state"
+  },
+  "componentProps": {
+    "prefix": "props",
+    "body": "this.props.$0",
+    "description": "Access component's props"
+  },
+  "componentState": {
+    "prefix": "state",
+    "body": "this.state.$0"
+  },
+  "reactMobxComponent": {
+    "prefix": "rmcp",
+    "body": [
+      "import React, { Component } from 'react'",
+      "import PropTypes from 'prop-types'",
+      "import { observer, inject } from 'mobx-react'",
+      "",
+      "@inject('store')",
+      "@observer",
+      "export default class $1 extends Component {",
+      "  static propTypes = {",
+      "  }",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "      </div>",
+      "    )",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Creates a React component class with PropTypes and mobx observer inject"
+  },
+  "reactmobxStore": {
+    "prefix": "rmsc",
+    "body": [
+      "import { observable, action, configure, runInAction } from 'mobx'",
+      "",
+      "configure({ enforceActions: true })",
+      "",
+      "export default class ${0: name} {",
+      "  @observable",
+      "  name = ''",
+      "",
+      "  @action",
+      "  async functionName(params){",
+      "    runInAction(() => {",
+      "    })",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Creates a React component class with PropTypes and mobx observer inject"
+  },
+  "reactMobxComponentAndFragment": {
+    "prefix": "rmcpf",
+    "body": [
+      "import React, { Component, Fragment } from 'react'",
+      "import PropTypes from 'prop-types'",
+      "import { observer, inject } from 'mobx-react'",
+      "",
+      "@inject('store')",
+      "@observer",
+      "export default class $1 extends Component {",
+      "  static propTypes = {",
+      "  }",
+      "",
+      "  render() {",
+      "    return (",
+      "      <Fragment>",
+      "        $0",
+      "      </Fragment>",
+      "    )",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Creates a React component class with PropTypes and mobx observer inject"
+  },
+  "reactComponentWithStyle": {
+    "prefix": "rcws",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
+      "import Style from './$1.less'",
+      "",
+      "export default class $1 extends React.Component {",
+      "  static propTypes = {",
+      "  }",
+      "  constructor() {",
+      "    super()",
+      "    Style.use()",
+      "  }",
+      "",
+      "  componentWillUnmount () {",
+      "    Style.unuse()",
+      "  }",
+      "",
+      "",
+      "  render() {",
+      "    return (",
+      "      <>",
+      "      </>",
+      "    )",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Creates a React component class with PropTypes"
+  },
+  "reactPageWithStyleAndRematch": {
+    "prefix": "rpsr",
+    "body": [
+      "import React from 'react'",
+      "import { connect } from 'react-redux'",
+      "import PropTypes from 'prop-types'",
+      "import Style from './$1.less'",
+      "import { createContainer } from 'utils/hoc'",
+      "",
+      "class $1 extends React.Component {",
+      "  static propTypes = {",
+      "    actions: PropTypes.object.isRequired,",
+      "  }",
+      "  state = {}",
+      "  constructor (props) {",
+      "    super(props)",
+      "    Style.use()",
+      "    //this.props.actions.get()",
+      "  }",
+      "",
+      "  componentWillUnmount () {",
+      "    Style.unuse()",
+      "  }",
+      "  render () {",
+      "    return (",
+      "      <>",
+      "        <div />",
+      "      </>",
+      "    )",
+      "  }",
+      "}",
+      "",
+      "const mapState = state => ({",
+      "  error: state.common.error,",
+      "})",
+      "",
+      "const mapDispatch = dispatch => ({",
+      "  actions: {",
+      "    // createDataTrack: dispatch.common.createDataTrack,",
+      "    get: dispatch.idx.get,",
+      "  },",
+      "})",
+      "",
+      "export default createContainer(",
+      "  connect(",
+      "    mapState,",
+      "    mapDispatch",
+      "  )($1)",
+      ")"
+    ],
+    "description": "Creates a React component class with PropTypes"
+  },
+  "rematchModelsWithActions": {
+    "prefix": "rmwa",
+    "body": [
+      "import idxActions from 'actions/idx'",
+      "",
+      "export default {",
+      "  state: {}, // initial state",
+      "  reducers: {",
+      "    // handle state changes with pure functions",
+      "    _get (state, payload) {",
+      "     state.getData = payload",
+      "      return state",
+      "    },",
+      "    _post (state, payload) {",
+      "      state.postData = payload",
+      "      return state",
+      "    },",
+      "  },",
+      "  effects: dispatch => ({",
+      "    async get (params) {",
+      "      const data = await idxActions.get(params)",
+      "      this._get(data)",
+      "    },",
+      "    async post (params) {",
+      "      const data = await idxActions.post(params)",
+      "      this._post(data)",
+      "    },",
+      "  }),",
+      "}"
+    ],
+    "description": "Creates a Rematch model"
+  },
+  "taroReactHooksPage": {
+    "prefix": "trhp",
+    "body": [
+      "import { View, Navigator, Image, Text } from '@tarojs/components'",
+      "import { Container } from '@/components'",
+      "import { useStoreState, useStoreActions } from '@/peasy'",
+      "import { useEffect } from '@/hooks'",
+      "import global from '@/global'",
+      "import { dealParams } from '@/utils/index'",
+      "import './index.less'",
+      "",
+      "export default function $0 () {",
+      "  const storeProps = useStoreState(state => state.xxx)",
+      "  const storeActions = useStoreActions(actions => actions.xxx)",
+      "",
+      "  return (",
+      "    <Container loading={storeProps.xx} error={storeProps.error} force={false} nav={{title: '小电'}} clear={storeActions._setError}>",
+      "    </Container>",
+      "  )",
+      "}",
+      "$0.config = {}"
+    ],
+    "description": "create taro react hooks page"
+  },
+  "taroReactComponent": {
+    "prefix": "trcm",
+    "body": [
+      "import { View, Block } from '@tarojs/components'",
+      "import PropTypes from 'prop-types'",
+      "import './index.less'",
+      "",
+      "export default function $0 () {",
+      "  return (",
+      "    <View>",
+      "    </View>",
+      "  )",
+      "}",
+      "$0.propTypes = {}",
+      "$0.defaultProps = {}"
+    ],
+    "description": "create taro react functional component"
+  },
+  "taroReactModels": {
+    "prefix": "trms",
+    "body": [
+      "import {} from '@/services/'",
+      "export default {",
+      "  form: null,",
+      "  sync: {",
+      "    updateForm (payload) {",
+      "      this.form = payload",
+      "    },",
+      "  },",
+      "  async: {",
+      "    async getDetail (payload) {",
+      "      // action 第二个参数 options 默认为{proxy: true}",
+      "      const data = await fetchGetDetail(payload)",
+      "      this.form = data",
+      "    },",
+      "  },",
+      "}"
+    ],
+    "description": "create taro react redux model"
+  }
+}
