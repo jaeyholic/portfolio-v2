@@ -78,21 +78,21 @@ const Projects = ({ limit }) => {
           }
         }
       }
-      ecowas: file(relativePath: { eq: "ecowas.jpg" }) {
+      ecowas: file(relativePath: { eq: "ecowas.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      signup: file(relativePath: { eq: "signup.jpg" }) {
+      signup: file(relativePath: { eq: "signup.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      dev: file(relativePath: { eq: "dev-signup.jpg" }) {
+      dev: file(relativePath: { eq: "dev-signup.png" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
