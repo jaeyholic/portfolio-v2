@@ -1,0 +1,40 @@
+{
+	"name": "tailwind-styled-snippets",
+	"displayName": "tailwind-styled-snippets",
+	"description": "A snippet for creating React Component with tailwindcss and styled-components or emotionjs",
+	"version": "0.2.1",
+	"repository": "https://github.com/muhajirdev/vscode-tailwind-styled-snippets",
+	"author": "Muhammad Muhajir <muhammad@muhajir.dev>",
+	"publisher": "muhajirdev",
+	"engines": {
+		"vscode": "^1.27.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "16da5c55-2691-4221-b10a-ab7269ac90e1",
+		"publisherId": "be40a4a0-8b40-4801-b6e1-89e884fb98ab",
+		"publisherDisplayName": "muhajirdev"
+	}
+}

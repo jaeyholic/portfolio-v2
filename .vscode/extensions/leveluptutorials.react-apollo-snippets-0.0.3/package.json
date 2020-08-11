@@ -1,0 +1,54 @@
+{
+	"name": "react-apollo-snippets",
+	"displayName": "React Apollo Snippets",
+	"description": "Basic snippets for React & Apollo",
+	"version": "0.0.3",
+	"publisher": "leveluptutorials",
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"icon": "images/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/leveluptuts/React-Apollo-Snippets-for-VSCode"
+	},
+	"galleryBanner": {
+		"color": "#524763",
+		"theme": "dark"
+	},
+	"keywords": [
+		"jsx",
+		"Apollo",
+		"JavaScript",
+		"GraphQL",
+		"React"
+	],
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/jsSnippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescriptreact",
+				"path": "./snippets/jsSnippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "abb64c53-a889-4dd0-858b-641e841b3f10",
+		"publisherId": "fb53bca4-f5fc-423a-b52f-d17cb8c3d143",
+		"publisherDisplayName": "leveluptutorials"
+	}
+}
