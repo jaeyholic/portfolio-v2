@@ -64,7 +64,7 @@ const Projects = ({ limit }) => {
           }
         }
       }
-      legend: file(relativePath: { eq: "legendframes.png" }) {
+      legend: file(relativePath: { eq: "legendframes.jpg" }) {
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid
